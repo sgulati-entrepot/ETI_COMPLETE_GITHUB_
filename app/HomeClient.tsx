@@ -10,6 +10,8 @@ const programs = [
   { no: "03", slug: "business-entrepreneurship", title: "Business & Entrepreneurship", image:"/images/course-entrepreneurship.png", text: "Turn ambitious ideas into resilient ventures through strategy, finance and market-led execution.", meta: "16 WEEKS · HYBRID" },
 ];
 
+const optimizedImage = (src: string, width = 900, quality = 76) => `/.netlify/images?url=${src}&w=${width}&q=${quality}`;
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -98,7 +100,7 @@ export default function Home() {
         <div className="program-list">
           {programs.map((item) => (
             <article key={item.no}>
-              <img className="program-thumb" src={item.image} alt="" loading="lazy"/>
+              <img className="program-thumb" src={optimizedImage(item.image, 720)} alt="" loading="lazy" decoding="async"/>
               <span className="number">{item.no}</span>
               <div className="program-title"><h3>{item.title}</h3><small>{item.meta}</small></div>
               <p>{item.text}</p>
@@ -133,27 +135,27 @@ export default function Home() {
         <div className="accreditation-grid">
           <article>
             <span>01</span>
-            <div className="accreditation-logo"><img src="/images/accreditation-iso-9001-transparent.png" alt="IAF ISO 9001:2015 certification logo" loading="lazy"/></div>
+            <div className="accreditation-logo"><img src={optimizedImage("/images/accreditation-iso-9001-transparent.png", 420)} alt="IAF ISO 9001:2015 certification logo" loading="lazy" decoding="async"/></div>
             <p>ISO 9001:2015</p>
           </article>
           <article>
             <span>02</span>
-            <div className="accreditation-logo"><img src="/images/affiliation-dubai-knowledge-transparent.png" alt="Dubai Knowledge logo" loading="lazy"/></div>
+            <div className="accreditation-logo"><img src={optimizedImage("/images/affiliation-dubai-knowledge-transparent.png", 520)} alt="Dubai Knowledge logo" loading="lazy" decoding="async"/></div>
             <p>Dubai Knowledge</p>
           </article>
           <article>
             <span>03</span>
-            <div className="accreditation-logo"><img src="/images/accreditation-cpd-transparent.png" alt="CPD Standards Office accredited course logo" loading="lazy"/></div>
+            <div className="accreditation-logo"><img src={optimizedImage("/images/accreditation-cpd-transparent.png", 420)} alt="CPD Standards Office accredited course logo" loading="lazy" decoding="async"/></div>
             <p>CPD Standards Office</p>
           </article>
           <article>
             <span>04</span>
-            <div className="accreditation-logo"><img src="/images/affiliation-cilt-transparent.png" alt="The Chartered Institute of Logistics and Transport logo" loading="lazy"/></div>
+            <div className="accreditation-logo"><img src={optimizedImage("/images/affiliation-cilt-transparent.png", 620)} alt="The Chartered Institute of Logistics and Transport logo" loading="lazy" decoding="async"/></div>
             <p>Chartered Institute of Logistics &amp; Transport</p>
           </article>
           <article>
             <span>05</span>
-            <div className="accreditation-logo"><img src="/images/affiliation-ifpsm-transparent.png" alt="International Federation of Purchasing and Supply Management logo" loading="lazy"/></div>
+            <div className="accreditation-logo"><img src={optimizedImage("/images/affiliation-ifpsm-transparent.png", 640)} alt="International Federation of Purchasing and Supply Management logo" loading="lazy" decoding="async"/></div>
             <p>International Federation of Purchasing &amp; Supply Management</p>
           </article>
         </div>
@@ -170,17 +172,17 @@ export default function Home() {
         <div className="awards-stage">
           <article>
             <span className="award-index">01</span>
-            <figure className="award-photo award-photo-partnership"><img src="/images/award-yenepoya-partnership.jpg" alt="Entrepôt representatives and Yenepoya University leaders marking an academic partnership" loading="lazy"/></figure>
+            <figure className="award-photo award-photo-partnership"><img src={optimizedImage("/images/award-yenepoya-partnership.jpg", 760)} alt="Entrepôt representatives and Yenepoya University leaders marking an academic partnership" loading="lazy" decoding="async"/></figure>
             <div><small>Academic Partnership</small><h3>Collaboration that expands opportunity.</h3><p>A partnership milestone with Yenepoya University, connecting professional learning with academic collaboration.</p></div>
           </article>
           <article>
             <span className="award-index">02</span>
-            <figure className="award-photo"><img src="/images/award-institutional-excellence.png" alt="Gold recognition trophy in an elegant ceremonial setting" loading="lazy"/></figure>
+            <figure className="award-photo"><img src={optimizedImage("/images/award-institutional-excellence.png", 760)} alt="Gold recognition trophy in an elegant ceremonial setting" loading="lazy" decoding="async"/></figure>
             <div><small>Institutional Excellence</small><h3>Standards that inspire confidence.</h3><p>Recognition of the quality, consistency and professional rigour behind every ETI learning experience.</p></div>
           </article>
           <article>
             <span className="award-index">03</span>
-            <figure className="award-photo"><img src="/images/award-learner-impact.png" alt="Professional learner receiving a completion certificate" loading="lazy"/></figure>
+            <figure className="award-photo"><img src={optimizedImage("/images/award-learner-impact.png", 760)} alt="Professional learner receiving a completion certificate" loading="lazy" decoding="async"/></figure>
             <div><small>Learner Impact</small><h3>Progress that creates momentum.</h3><p>Acknowledging outcomes that help learners build capability, confidence and meaningful career value.</p></div>
           </article>
         </div>
