@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const META_PIXEL_ID = "1976753683143225";
+const GOOGLE_ANALYTICS_ID = "G-HXL51X2GTS";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GOOGLE_ANALYTICS_ID}');`,
+          }}
+        />
         <Script
           id="meta-pixel"
           strategy="lazyOnload"
