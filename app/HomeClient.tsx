@@ -61,8 +61,8 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow"><i/> Gateway to Excellence</p>
           <h1 className="hero-career-title">
-            Build Job-Ready Skills<br/>
-            for Careers in <em>Aviation,<br/>Logistics and Supply Chain.</em>
+            Practical Training That Builds Skills,<br/>
+            Advances Careers and <em>Strengthens Organizations.</em>
           </h1>
           <p className="hero-copy">Elevated learning experiences designed for professionals who are ready to lead with clarity, confidence and purpose.</p>
           <div className="hero-actions">
