@@ -7,6 +7,7 @@ const programmes = [
   "Certified Procurement International Professional (CPIP)", "Certified International Supply Chain Manager (CISM)",
   "Certified International Supply Chain Professional (CISP)", "Certified Human Resource Professional (CHRP)",
   "UAE VAT Training", "UAE E-Invoicing Compliance Training", "Sales Professional with AI", "MLRO Training",
+  "AI Prompt Engineering Course", "AI Generalist Course",
   "Letter of Credit (LC) Training", "Hotel and Hospitality Management", "Export and Import Management",
   "Executive Secretary / Office Administrator", "AML Compliance CPD for Exchange Houses",
   "Certified Quantity Surveyor Training", "PRO Training", "Corporate Training Programme", "Other / Not sure yet",

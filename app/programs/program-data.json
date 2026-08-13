@@ -1908,5 +1908,56 @@
       {"title":"Group Accounting & Interpretation","topics":["Consolidation basics", "Associates and joint ventures", "Business combinations", "Financial-statement analysis"]}
     ],
     "outcomes": ["Understand IFRS principles and concepts", "Apply major IFRS standards", "Prepare basic IFRS-compliant statements", "Explain key disclosure requirements", "Interpret IFRS-based financial statements confidently"]
+  },
+  {
+    "code": "AI PROMPT ENGINEERING",
+    "title": "AI Prompt Engineering Course",
+    "slug": "ai-prompt-engineering",
+    "strapline": "Master the prompt. Multiply your impact.",
+    "summary": "Generative AI is only as effective as the direction it receives. This practical, hands-on course teaches participants to create clear, structured and high-impact prompts for content, research, marketing, business analysis, automation and problem-solving. Learners develop a repeatable method for briefing AI, testing its work and improving results across real workplace applications.",
+    "cover": "/images/ai-prompt-engineering-landscape.jpg",
+    "file": "/brochures/ai-prompt-engineering.pdf",
+    "duration": "12 hours across 6 modules",
+    "format": "Face-to-face or virtual instructor-led",
+    "qualification": ["No programming or prior AI experience required", "Basic computer and internet skills", "Familiarity with common office-productivity tools"],
+    "audience": ["Marketing and content professionals", "Entrepreneurs, designers and product teams", "Freelancers, consultants and coaches", "Analysts and business strategists", "Developers and tech-savvy professionals", "Students and career switchers"],
+    "benefits": ["Create clearer, more relevant AI responses", "Build repeatable prompts for everyday work", "Generate stronger ideas, content and campaigns", "Evaluate, refine and improve AI outputs"],
+    "modules": [
+      {"title":"Introduction to Prompt Engineering","topics":["Prompt engineering fundamentals", "Generative AI versus traditional AI", "The prompt engineer's role"]},
+      {"title":"Language Models & How They Think","topics":["ChatGPT, Gemini and Claude", "Tokens and context windows", "Response behaviour"]},
+      {"title":"Prompt Design & Patterns","topics":["Instructional, zero-shot and few-shot prompts", "Reusable templates", "Multi-step reasoning frameworks"]},
+      {"title":"Use Case-Based Prompting","topics":["Blogs, posts and emails", "Strategy, SWOT and OKRs", "SEO, advertising and marketing frameworks", "Code generation, debugging and refactoring"]},
+      {"title":"Advanced Prompting & AI Tools","topics":["Image and video prompting", "Role-based prompting", "Multi-step agents and practical workflows"]},
+      {"title":"Ethics, Accuracy & Prompt Optimisation","topics":["Minimising hallucinations", "Data privacy and responsible use", "Testing and refining outputs"]}
+    ],
+    "outcomes": ["Design structured prompts for accurate, relevant responses", "Create efficient workflows for repetitive tasks", "Apply AI to content, marketing, analysis and operations", "Support coding, strategy, problem-solving and innovation", "Evaluate and improve weak AI-generated outputs", "Use AI responsibly, ethically and professionally"]
+  },
+  {
+    "code": "AI GENERALIST",
+    "title": "AI Generalist Course",
+    "slug": "ai-generalist",
+    "strapline": "Learn. Apply. Automate. Create.",
+    "summary": "This course equips learners to use Artificial Intelligence effectively across business, education, marketing, software, customer service and everyday work. The programme combines AI fundamentals with prompt engineering, generative tools, automation, responsible use and practical industry applications through guided exercises and real-world projects.",
+    "cover": "/images/ai-generalist-landscape.jpg",
+    "file": "/brochures/ai-generalist.pdf",
+    "duration": "24 guided learning hours",
+    "format": "Face-to-face or virtual instructor-led",
+    "qualification": ["No prior AI or programming experience required", "Basic computer and internet skills", "Familiarity with common office tools"],
+    "audience": ["Students and fresh graduates preparing for AI-enabled careers", "Working professionals improving productivity", "Entrepreneurs and business owners adopting AI", "Educators integrating AI into teaching", "Marketing, sales, HR, recruitment and operations teams", "Freelancers and consultants expanding their services"],
+    "benefits": ["Apply AI across everyday professional work", "Create content and analyse business data", "Automate routine tasks and workflows", "Use AI responsibly across industries"],
+    "modules": [
+      {"title":"Introduction to Artificial Intelligence","topics":["History and types of AI", "AI, machine learning and deep learning", "The AI ecosystem and current trends"]},
+      {"title":"Generative AI Fundamentals","topics":["Large language models, tokens and context windows", "Hallucinations and output quality", "Model strengths and limitations"]},
+      {"title":"Prompt Engineering","topics":["Prompt structures and templates", "Zero-shot and few-shot prompting", "Role prompting and reasoning concepts"]},
+      {"title":"AI Productivity Tools","topics":["Chat, search and writing assistants", "Meeting and presentation tools", "Emails, reports and document summaries"]},
+      {"title":"AI for Content Creation","topics":["Blogs, social posts and copywriting", "Image, video and audio generation", "Storytelling and campaign development"]},
+      {"title":"AI for Business","topics":["Marketing automation and sales support", "Customer service and recruitment", "Finance and business intelligence"]},
+      {"title":"AI for Data Analysis","topics":["Data interpretation and spreadsheet automation", "Dashboards and visualisation", "Predictive insights"]},
+      {"title":"AI Automation","topics":["Workflow automation and AI agents", "No-code automation and API concepts", "Productivity workflows"]},
+      {"title":"AI Ethics, Privacy & Security","topics":["Responsible AI, bias and governance", "Copyright and privacy", "Security risks and deepfakes"]},
+      {"title":"AI Across Industries","topics":["Healthcare, education and finance", "Manufacturing, retail, media and legal", "Government, logistics and real estate"]},
+      {"title":"Emerging AI Trends","topics":["AI agents and multimodal AI", "Robotics and autonomous systems", "AI in cybersecurity and future careers"]}
+    ],
+    "outcomes": ["Use AI for research, writing, analysis and content creation", "Design effective prompts for accurate, useful outputs", "Evaluate AI content for quality, accuracy and bias", "Automate routine tasks using AI-powered workflows", "Apply AI in business, education and workplace scenarios", "Collaborate with AI to improve productivity and decisions", "Develop AI-assisted projects for real-world challenges"]
   }
 ]
