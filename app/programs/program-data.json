@@ -2011,5 +2011,27 @@
     "benefits":["Improve Listening, Reading, Writing and Speaking","Recognise question types and apply effective exam strategies","Strengthen vocabulary, grammar, fluency and pronunciation","Manage time accurately under exam conditions","Use practice tests and full mock exams to monitor progress","Receive writing correction, speaking feedback and personalised guidance"],
     "modules":[{"title":"Listening","topics":["Key information and global accents","Multiple choice and completion tasks","Maps and diagrams","Accurate listening under timed conditions"]},{"title":"Reading","topics":["Skimming and scanning","Main ideas and detail","True, False and Not Given questions","Headings and summaries"]},{"title":"Writing","topics":["Task planning and paragraph control","Essay structure and argument","Academic graphs, charts, tables and diagrams","General Training formal, semi-formal and informal letters"]},{"title":"Speaking","topics":["Interview technique","Cue cards and discussion","Fluency and confidence","Vocabulary and pronunciation"]},{"title":"Practice, Test & Refine","topics":["Test format, timing, rules and band scores","Question-type practice","Full mock examinations","Writing correction and speaking feedback"]}],
     "outcomes":["Understand the IELTS format, timing, rules and band criteria","Apply effective strategies across all four skills","Complete Listening and Reading question types more confidently","Plan and produce structured Writing responses","Speak with greater fluency, vocabulary control and confidence","Manage tasks accurately under exam conditions","Use feedback and mock-test results to target improvement"]
+  },
+  {
+    "code":"FM","title":"Facility Management Training","slug":"facility-management-training","strapline":"Operate smarter. Lead better. Build lasting value.",
+    "summary":"This comprehensive professional-development programme builds the practical and strategic capability required to manage facilities as valuable business assets. Participants learn to integrate people, place, process and technology while improving building operations, workplace experience, resilience, sustainability and organisational performance.",
+    "cover":"/images/facility-management-training-hero.jpg","hero":"/images/facility-management-training-hero.jpg","file":"/brochures/facility-management-training.pdf","duration":"Comprehensive 11-module professional pathway","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No specific qualification is stated in the programme brochure","Practical facilities, engineering, property or operations experience is beneficial","Suitable for professionals seeking broader strategic and operational FM capability"],
+    "audience":["Facility managers","Facilities engineers","Maintenance managers and supervisors","Building and property managers","Operations managers","Workplace and asset managers","Facility-management consultants"],
+    "benefits":["Apply professional facility-management principles","Improve operations, safety and sustainability","Use financial, strategic and technology tools","Connect workplace systems and services to business value","Strengthen risk, continuity and emergency readiness","Make evidence-based decisions through planning and performance data"],
+    "modules":[
+      {"title":"Occupancy & Human Factors","topics":["Workplace planning","Occupant experience and wellbeing","Safety and security","Accessibility"]},
+      {"title":"Operations & Maintenance","topics":["Building systems","HVAC, electrical and plumbing","Preventive maintenance and work orders","Contractor management"]},
+      {"title":"Sustainability","topics":["Energy and water efficiency","Sustainable procurement","Waste and recycling","Environmental performance"]},
+      {"title":"Facility Information & Technology","topics":["Facility data and records","CAFM and IWMS","Technology implementation","Cybersecurity and digital FM"]},
+      {"title":"Risk Management","topics":["Risk assessment","Emergency response and recovery","Business continuity","Resilience and crisis management"]},
+      {"title":"Communication","topics":["Stakeholder communication","Management reporting","Presentation","Feedback and evaluation"]},
+      {"title":"Performance & Quality","topics":["Standards and KPIs","Service-level agreements","Benchmarking and audits","Continuous improvement"]},
+      {"title":"Leadership & Strategy","topics":["FM strategy and business alignment","Compliance","Team leadership","Conflict and change"]},
+      {"title":"Finance & Business","topics":["Budgets and cost control","Business cases","Procurement and vendors","Contract management"]},
+      {"title":"Real Estate","topics":["Property and asset strategy","Space and leases","Acquisition and disposal","Major projects"]},
+      {"title":"Project Management","topics":["Requirements and design","Schedule and budget","Procurement and execution","Project delivery"]}
+    ],
+    "outcomes":["Manage facilities through an integrated people, place, process and technology perspective","Improve the reliability of buildings, infrastructure and service delivery","Plan safer, more sustainable and people-centred workplaces","Use KPIs, quality standards, budgets and data to guide decisions","Strengthen risk management, continuity and emergency readiness","Align FM strategy, property, finance and projects with organisational goals"]
   }
 ]
