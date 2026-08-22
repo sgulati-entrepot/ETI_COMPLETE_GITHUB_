@@ -2,6 +2,7 @@ import Link from "next/link";
 import {SiteFooter,SiteHeader} from "../components";
 
 const articles=[
+  {category:"Corporate Learning",title:"Customized Training Programs: Turning Workforce Skills Gaps Into Business Results",excerpt:"A five-step framework for connecting workforce capability, practical learning and measurable business performance.",image:"/images/customized-training-programs-hero.jpg",read:"9 min read",href:"/blog/customized-training-programs"},
   {category:"Leadership",title:"Transformational Leaders",excerpt:"The clarity, communication, capability and accountability that will define high-performing professionals from 2026 to 2030.",image:"/images/course-leadership.png",read:"7 min read",href:"/blog/transformational-leaders"},
   {category:"Leadership & EI",title:"EI vs AI: Why Emotional Intelligence Still Wins in Leadership",excerpt:"Why emotionally intelligent leaders remain the human advantage behind high-performing organisations.",image:"/images/corporate-training-hero.png",read:"6 min read",href:"/blog/emotional-intelligence-vs-ai"},
   {category:"Data & Analytics",title:"Power BI & Advanced Excel: Decode Data. Drive Decisions.",excerpt:"A practical path from spreadsheets and dashboards to useful insight, stronger decisions and action.",image:"/images/microsoft-power-bi-training-landscape.jpg",read:"8 min read",href:"/blog/power-bi-advanced-excel"},
