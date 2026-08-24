@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
 import { FormEvent, useState } from "react";
-import { AboutMenu, CorporateMenu, EnquiryLeadButton, InstagramLink, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
+import { AboutMenu, CorporateMenu, EnquiryLeadButton, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 
 const programs = [
   { no: "01", slug: "leadership-management", title: "Leadership & Management", image:"/images/course-leadership.png", text: "Build decisive leaders who inspire teams, navigate change and deliver measurable outcomes.", meta: "12 WEEKS · HYBRID" },
@@ -48,7 +48,7 @@ export default function Home() {
           <AboutMenu/>
           <ProgramMenu/>
           <CorporateMenu/>
-          <a href="/students-club" className="students-club-nav-link" onClick={() => setMenuOpen(false)}>Insights</a>
+          <InsightsMenu/>
           <a href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
           <a href="/student-registration" className="register-nav-link" onClick={() => setMenuOpen(false)}>Register Now</a>
           <div className="nav-socials"><InstagramLink/><LinkedInLink/><YouTubeLink/><WhatsAppLink/></div>
