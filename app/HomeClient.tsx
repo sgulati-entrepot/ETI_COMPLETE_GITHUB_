@@ -48,7 +48,7 @@ export default function Home() {
           <AboutMenu/>
           <ProgramMenu/>
           <CorporateMenu/>
-          <a href="/students-club" className="students-club-nav-link" onClick={() => setMenuOpen(false)}>Student&apos;s Club</a>
+          <a href="/students-club" className="students-club-nav-link" onClick={() => setMenuOpen(false)}>Insights</a>
           <a href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
           <a href="/student-registration" className="register-nav-link" onClick={() => setMenuOpen(false)}>Register Now</a>
           <div className="nav-socials"><InstagramLink/><LinkedInLink/><YouTubeLink/><WhatsAppLink/></div>
