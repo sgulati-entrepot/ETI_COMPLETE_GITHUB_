@@ -3,7 +3,7 @@ import ContactLeadForm from "./ContactLeadForm";
 import OfficeWorldMap from "./OfficeWorldMap";
 
 const offices=[
-  {city:"Dubai",region:"United Arab Emirates",address:"109, First Floor, Al Bannai Building, Plot No. 47, Al Nahda First, Dubai, United Arab Emirates",phones:[{label:"Mobile: +971 54 417 7480",href:"tel:+971544177480"},{label:"Landline: 04 342 3009",href:"tel:+97143423009"}],map:"https://www.google.com/maps?q=Al%20Bannai%20Building%20Al%20Nahda%20First%20Dubai&output=embed",open:"https://www.google.com/maps/search/?api=1&query=Al%20Bannai%20Building%20Al%20Nahda%20First%20Dubai"},
+  {city:"Dubai",region:"United Arab Emirates",address:"109, First Floor, Al Bannai Building, Plot No. 47, Al Nahda First, Dubai, United Arab Emirates",phones:[{label:"Mobile: +971 54 417 7480",href:"tel:+971544177480"},{label:"Mobile: +971 54 535 3558",href:"tel:+971545353558"},{label:"Landline: 04 342 3009",href:"tel:+97143423009"}],map:"https://www.google.com/maps?q=Al%20Bannai%20Building%20Al%20Nahda%20First%20Dubai&output=embed",open:"https://www.google.com/maps/search/?api=1&query=Al%20Bannai%20Building%20Al%20Nahda%20First%20Dubai"},
   {city:"Mumbai",region:"India",address:"910, 9th Floor, Hub Town Viva, Shankarwadi, Western Express Highway, Jogeshwari East, Mumbai 400 060",phones:[{label:"Phone: +91 99206 56666",href:"tel:+919920656666"}],map:"https://www.google.com/maps?q=Hubtown%20Viva%20Jogeshwari%20East%20Mumbai%20400060&output=embed",open:"https://www.google.com/maps/search/?api=1&query=Hubtown%20Viva%20Jogeshwari%20East%20Mumbai%20400060"}
 ];
 
