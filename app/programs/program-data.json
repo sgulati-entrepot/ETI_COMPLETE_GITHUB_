@@ -2033,5 +2033,24 @@
       {"title":"Project Management","topics":["Requirements and design","Schedule and budget","Procurement and execution","Project delivery"]}
     ],
     "outcomes":["Manage facilities through an integrated people, place, process and technology perspective","Improve the reliability of buildings, infrastructure and service delivery","Plan safer, more sustainable and people-centred workplaces","Use KPIs, quality standards, budgets and data to guide decisions","Strengthen risk management, continuity and emergency readiness","Align FM strategy, property, finance and projects with organisational goals"]
+  },
+  {
+    "code":"GROUND HANDLING","title":"Airport Terminal and Ramp Ground Handling Services Training","slug":"airport-terminal-ramp-ground-handling-services","strapline":"Passenger-first. Safety-led. Turnaround-ready.",
+    "summary":"This integrated professional aviation programme builds a complete understanding of passenger-facing airport terminal operations and time-critical airside ramp services. Learners develop practical capability across check-in, boarding, documentation, baggage, customer service, aircraft turnaround, ground support equipment, airside safety, security and operational coordination.",
+    "cover":"/images/airport-terminal-ramp-ground-handling-cover.jpg","hero":"/images/airport-terminal-ramp-ground-handling-cover.jpg","file":"/brochures/airport-terminal-ramp-ground-handling.pdf","duration":"Integrated terminal and ramp operations pathway","format":"Face-to-face, online or hybrid learning",
+    "qualification":["Minimum high-school education, Grade 10 or equivalent","Basic computer skills","Suitable for beginners and working professionals"],
+    "audience":["Aspiring passenger service agents","Baggage handling and ramp operations candidates","Airline customer service candidates","Future turnaround coordinators","Entry-level ground handling professionals","Airport operations staff seeking broader capability"],
+    "benefits":["Support passengers confidently from check-in through arrival","Verify travel documents and communicate accurately","Apply baggage tagging, tracing and mishandled-baggage procedures","Understand aircraft turnaround and ramp-service coordination","Recognise GSE, airside hazards and safe operating zones","Connect terminal, baggage, ramp and departure workflows"],
+    "modules":[
+      {"title":"Aviation Foundations & Language","topics":["History of aviation and ground handling","Regulatory authorities","ICAO phonetic alphabet","24-hour clock, UTC and time zones"]},
+      {"title":"Industry Codes, Passenger Flow & Travel Information","topics":["Airline abbreviations and IATA codes","Check-in, boarding and arrival processes","TIM, visa and entry requirements","Health and vaccination information"]},
+      {"title":"Documentation & Terminal Operations","topics":["Passport and visa checks","Accurate information verification","Announcements and terminal zones","Arrival, baggage claim and customs support"]},
+      {"title":"Baggage, Cabin & Seating","topics":["Baggage tagging, tracing and reporting","Mishandled baggage and complaint resolution","Cabin classes and service zones","Exit rows and special seating"]},
+      {"title":"Customer Service, Communication & Team Coordination","topics":["Professional passenger assistance","Service recovery and escalation","Clear announcements and operational terminology","Coordination with airline crew, security and ground handlers"]},
+      {"title":"Airside Services, Aircraft & Turnaround","topics":["Airside roles and stakeholders","Aircraft types and critical zones","Parking guidance and turnaround workflows","Cleaning, catering, water, lavatory and hygiene services"]},
+      {"title":"Ground Support Equipment, SOPs & Safety","topics":["Tugs, belt loaders and ground power units","Equipment inspection and safe positioning","Routing, timing and ramp coordination","PPE, hazards, safe zones and incident reporting"]},
+      {"title":"Security & Future Ramp Services","topics":["Access control and airport badges","Suspicious behaviour and incident response","Automation and performance data","Sustainability and electric GSE"]}
+    ],
+    "outcomes":["Assist passengers at check-in, boarding gates and arrival areas","Apply professional communication and documentation procedures","Handle baggage processes and mishandled-baggage support","Recognise aircraft zones, services and safety clearances","Support GSE sequencing and turnaround coordination","Apply PPE, hazard-identification and incident-reporting practices","Follow airside security and access-control procedures","Understand how terminal, baggage and ramp teams connect"]
   }
 ]
