@@ -2071,5 +2071,43 @@
       {"title":"Future Trends in Ramp Services","topics":["Automation and digitalisation","Electric ground support equipment","Sustainable ramp operations","Data-driven performance"]}
     ],
     "outcomes":["Operate belt loaders, tugs, GPU and air start units using standard safety procedures","Support baggage, water, lavatory, catering and cabin-service activities","Apply SOPs for ramp movement, equipment positioning and aircraft servicing","Coordinate clearly with ramp teams, cockpit crew, cabin crew and supervisors","Identify hazards and apply PPE, safe-zone and incident-reporting practices","Follow airside access-control, badge and security procedures","Understand aircraft characteristics, clearances and turnaround workflows","Recognise emerging automation, electric GSE and data-driven ramp operations"]
+  },
+  {
+    "code":"TERMINAL GROUND","title":"Airport Terminal Ground Handling","slug":"airport-terminal-ground-handling","strapline":"Passenger service. Terminal precision. Career-ready skills.",
+    "summary":"The Airport Terminal Ground Handling course is a practical starting point for learners who want to work in airport passenger operations. It builds confidence in check-in, boarding, baggage handling and terminal announcements while developing an understanding of the fast-paced coordination behind safe, efficient ground operations.",
+    "cover":"/images/airport-terminal-ground-handling.jpg","hero":"/images/airport-terminal-ground-handling.jpg","heroFit":"cover","file":"/brochures/airport-terminal-ground-handling.pdf","duration":"Practical 17-topic airport-operations pathway","format":"Face-to-face, online or hybrid learning",
+    "qualification":["Minimum high-school education","Basic computer skills","Suitable for beginners ready to enter aviation"],
+    "audience":["Aspiring passenger service agents","Baggage handling candidates","Future ramp agents","Airline customer-service candidates","Reservation and ticketing candidates","Airport terminal operations candidates"],
+    "benefits":["Assist passengers confidently at check-in, boarding and arrival","Handle baggage tagging, tracing and reporting accurately","Coordinate with airline crew, ground handlers and security","Use aviation terminology and announcements professionally","Verify travel documents and passenger requirements","Understand airport codes, time systems and handling flow"],
+    "modules":[
+      {"title":"Aviation Foundations & Authorities","topics":["History of commercial aviation","Evolution of ground handling","ICAO, IATA and national authorities","Airport stakeholder responsibilities"]},
+      {"title":"Aviation Communication & Time","topics":["ICAO phonetic alphabet","24-hour clock","UTC and time-zone conversion","Ground communication application"]},
+      {"title":"Industry Codes & Airport Handling Flow","topics":["Airline abbreviations","IATA airport codes","IATA airline codes","Passenger journey and aircraft turnaround"]},
+      {"title":"Dangerous Goods & Travel Information","topics":["Dangerous-goods classification","Handling and safety guidelines","Visa and entry information","Health and vaccination requirements"]},
+      {"title":"Travel Documentation & Announcements","topics":["Passport and visa checks","Accurate document verification","Standard announcement types","Professional announcement delivery"]},
+      {"title":"Terminal & Arrival Procedures","topics":["Terminal zones and service points","Deboarding and immigration","Baggage claim and customs","Transit passenger support"]},
+      {"title":"Mishandled Baggage","topics":["Baggage issue types","Tracing and reporting","Complaint resolution","Service recovery"]},
+      {"title":"Cabin, Seating & Team Coordination","topics":["Cabin classes and service zones","Exit rows and special seating","Airline and security coordination","Professional passenger communication"]}
+    ],
+    "outcomes":["Support passengers throughout check-in, boarding and arrival","Apply baggage tagging, tracing and mishandled-baggage processes","Coordinate effectively with airline, ground-handling and security teams","Use aviation codes, time systems and professional terminology","Verify travel documents and essential passenger information","Deliver clear terminal announcements and customer support","Understand terminal layout, arrival and transit procedures","Recognise dangerous-goods and passenger-safety requirements"]
+  },
+  {
+    "code":"PASSENGER SERVICES","title":"Airport Passenger Ground Services","slug":"airport-passenger-ground-services","strapline":"Build the confidence, systems knowledge and service skills to support every passenger journey.",
+    "summary":"Designed for freshers and travel enthusiasts, this practical programme introduces the operational procedures, safety protocols, customer-care standards and communication techniques used across the airport passenger journey. Learners build the confidence to support travellers from check-in to boarding and beyond.",
+    "cover":"/images/airport-passenger-ground-services.jpg","hero":"/images/airport-passenger-ground-services.jpg","heroFit":"cover","file":"/brochures/airport-passenger-ground-services.pdf","duration":"Practical 8-module passenger-services pathway","format":"Face-to-face, online or hybrid learning",
+    "qualification":["Minimum high-school education","Good communication skills in English","Suitable for freshers and travel enthusiasts"],
+    "audience":["Aspiring passenger service agents","Ticketing and reservations candidates","Future DCS operators","Airport lounge and special-services candidates","Lost-and-found and baggage-service candidates","Ground operations candidates"],
+    "benefits":["Manage check-in records, seating and document verification","Apply baggage acceptance, tagging and transfer procedures","Prepare boarding gates and complete final checks","Deliver service confidently in multicultural environments","Recognise dangerous-goods and aviation-security requirements","Support passengers professionally during delays and disruptions"],
+    "modules":[
+      {"title":"Introduction to Airport & Airline Ground Operations","topics":["Roles of airlines, airports and handling agents","Passenger ground services","Unit coordination","Key operational processes"]},
+      {"title":"CRS & Departure Control Systems","topics":["CRS and DCS fundamentals","Accurate passenger name records","Check-in and seat assignment","Boarding functions"]},
+      {"title":"Passenger & Baggage Check-in","topics":["Counter, remote, online and mobile check-in","Travel-document checks","Baggage tagging and weight","Transfer and through check-in"]},
+      {"title":"Conditions of Carriage & Boarding","topics":["Conditions of carriage","Regulatory references","Gate setup and final control","Close-out records"]},
+      {"title":"Dangerous Goods Awareness","topics":["DGR fundamentals","Passenger responsibilities","Prohibited items","Restricted items"]},
+      {"title":"Managing Passenger Interactions","topics":["Service excellence","Multicultural communication","Complaint handling","Delay support and recovery"]},
+      {"title":"Aviation Security Procedures","topics":["International standards","Screening protocols","Baggage checks","Access control"]},
+      {"title":"Enhanced Passenger Facilitation","topics":["Passenger flow","Queue automation","Airport digitisation","Career development"]}
+    ],
+    "outcomes":["Support frontline passenger processes and airport coordination","Use CRS and DCS principles across check-in and boarding","Handle passenger and baggage check-in accurately","Prepare gates, control boarding and maintain close-out records","Communicate clearly in multicultural service environments","Respond professionally to complaints, delays and special assistance","Recognise dangerous-goods and aviation-security requirements","Understand passenger-flow technology and airport digitisation"]
   }
 ]
