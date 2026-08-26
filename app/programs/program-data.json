@@ -2052,5 +2052,24 @@
       {"title":"Security & Future Ramp Services","topics":["Access control and airport badges","Suspicious behaviour and incident response","Automation and performance data","Sustainability and electric GSE"]}
     ],
     "outcomes":["Assist passengers at check-in, boarding gates and arrival areas","Apply professional communication and documentation procedures","Handle baggage processes and mishandled-baggage support","Recognise aircraft zones, services and safety clearances","Support GSE sequencing and turnaround coordination","Apply PPE, hazard-identification and incident-reporting practices","Follow airside security and access-control procedures","Understand how terminal, baggage and ramp teams connect"]
+  },
+  {
+    "code":"RAMP SERVICES","title":"Airport Ramp Services Course","slug":"airport-ramp-services","strapline":"Safety. Precision. Turnaround excellence.",
+    "summary":"This practical aviation ground-operations programme equips learners with essential knowledge and skills to work safely and efficiently on the airport ramp. It covers aircraft turnaround, baggage handling, marshalling, ground support equipment, cabin servicing, ramp safety, communication protocols and standard operating procedures in a fast-paced airside environment.",
+    "cover":"/images/airport-ramp-services-cover.jpg","hero":"/images/airport-ramp-services-cover.jpg","heroFit":"contain","file":"/brochures/airport-ramp-services.pdf","duration":"Practical 8-module ramp operations pathway","format":"Face-to-face, online or hybrid learning",
+    "qualification":["Grade 10, O-Level, Class 10 or equivalent","Suitable for new entrants to aviation ground operations","Suitable for working professionals seeking ramp-services capability"],
+    "audience":["Aspiring ramp agents","Baggage handling candidates","Future aircraft marshallers","Turnaround coordinators and supervisors","Ramp security and ground handling candidates","Working professionals seeking airport ground-operations capability"],
+    "benefits":["Work safely and efficiently in the airside environment","Support aircraft turnaround and on-ground services","Operate and position essential ground support equipment safely","Apply ramp SOPs, movement controls and equipment-routing practices","Recognise hazards, use PPE and report incidents accurately","Coordinate clearly with ramp teams, cockpit crew, cabin crew and supervisors"],
+    "modules":[
+      {"title":"Introduction to Airside & Ramp Services","topics":["Airside environment, roles and stakeholders","Ground time and turnaround efficiency","Ramp-service responsibilities","Airside operating context"]},
+      {"title":"Aircraft Characteristics & Turnaround Planning","topics":["Aircraft types and turnaround workflows","Aircraft approach and parking","Critical aircraft zones","Clearances and service planning"]},
+      {"title":"Cleaning, Catering & Other On-Ground Services","topics":["Cabin-cleaning procedures","Catering logistics","Water and lavatory servicing","Waste handling and hygiene"]},
+      {"title":"Ground Support Equipment","topics":["Tugs, belt loaders and ground power units","Air start units","Safe equipment operation and positioning","Inspection, defects and reporting"]},
+      {"title":"Standard Operating Procedures","topics":["GSE routing and positioning","Ramp communication protocols","Turnaround timing","Cockpit and cabin-crew coordination"]},
+      {"title":"Airside Safety","topics":["Personal protective equipment","Hazard identification and risk mitigation","Safe zones and movement control","Incident reporting"]},
+      {"title":"Ramp Security Awareness","topics":["Ramp-security regulations","Access control and badge protocols","Incident response","Suspicious-item awareness"]},
+      {"title":"Future Trends in Ramp Services","topics":["Automation and digitalisation","Electric ground support equipment","Sustainable ramp operations","Data-driven performance"]}
+    ],
+    "outcomes":["Operate belt loaders, tugs, GPU and air start units using standard safety procedures","Support baggage, water, lavatory, catering and cabin-service activities","Apply SOPs for ramp movement, equipment positioning and aircraft servicing","Coordinate clearly with ramp teams, cockpit crew, cabin crew and supervisors","Identify hazards and apply PPE, safe-zone and incident-reporting practices","Follow airside access-control, badge and security procedures","Understand aircraft characteristics, clearances and turnaround workflows","Recognise emerging automation, electric GSE and data-driven ramp operations"]
   }
 ]
