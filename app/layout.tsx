@@ -5,6 +5,7 @@ import "./globals.css";
 
 const META_PIXEL_ID = "1976753683143225";
 const GOOGLE_ANALYTICS_ID = "G-HXL51X2GTS";
+const GOOGLE_ADS_ID = "AW-18398125830";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,10 +53,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Script
-          id="google-analytics"
+          id="google-tag"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GOOGLE_ANALYTICS_ID}');`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GOOGLE_ANALYTICS_ID}');gtag('config','${GOOGLE_ADS_ID}');`,
           }}
         />
         <Script
