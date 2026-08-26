@@ -2109,5 +2109,26 @@
       {"title":"Enhanced Passenger Facilitation","topics":["Passenger flow","Queue automation","Airport digitisation","Career development"]}
     ],
     "outcomes":["Support frontline passenger processes and airport coordination","Use CRS and DCS principles across check-in and boarding","Handle passenger and baggage check-in accurately","Prepare gates, control boarding and maintain close-out records","Communicate clearly in multicultural service environments","Respond professionally to complaints, delays and special assistance","Recognise dangerous-goods and aviation-security requirements","Understand passenger-flow technology and airport digitisation"]
+  },
+  {
+    "code":"FTTD","title":"Foundation in Travel & Tourism Diploma","slug":"foundation-travel-tourism-diploma","strapline":"Turn travel knowledge into a global career.",
+    "summary":"This career-ready foundation diploma introduces the essential knowledge used by travel agencies, airlines, hotels, tour operators and customer-service teams. Designed for freshers and travel enthusiasts, it develops confidence in global geography, travel formalities, transport modes, accommodation, itinerary planning, customer care and ticketing essentials.",
+    "cover":"/images/foundation-travel-tourism-diploma.jpg","hero":"/images/foundation-travel-tourism-diploma.jpg","heroFit":"cover","file":"/brochures/foundation-travel-tourism-diploma.pdf","duration":"Foundation diploma across 10 practical modules","format":"Face-to-face, online or hybrid learning",
+    "qualification":["High-school education","Good English communication skills","Suitable for freshers and travel enthusiasts"],
+    "audience":["Aspiring travel consultants","Future tour operators","Reservation and ticketing candidates","Airport ground-services candidates","Hotel front-office candidates","Travel sales and customer-service professionals"],
+    "benefits":["Recognise roles across travel agencies, airlines, hotels and tour operations","Navigate IATA areas, destinations, time zones and seasonal travel patterns","Understand passports, visas, insurance, immigration and customs","Compare air, rail, car, camper, cruise and ferry operations","Plan accommodation, itineraries and tour packages","Build customer-service, sales and ticketing foundations"],
+    "modules":[
+      {"title":"Introduction to Travel and Tourism","topics":["Industry overview","Travel professionals","Agencies and tour operators","Career pathways"]},
+      {"title":"Geography & Cultural Awareness","topics":["IATA areas and global indicators","Key destinations","Time zones and seasons","Cultural awareness"]},
+      {"title":"Travel Formalities & Safety","topics":["Passports and visas","Health regulations and insurance","Immigration and customs","Traveller security"]},
+      {"title":"Air Transport & Airline Operations","topics":["Airline industry","Airport and airline codes","Check-in and baggage","The role of IATA"]},
+      {"title":"Land Transport","topics":["Global rail systems","Car rental","Camper travel","Documentation, insurance and safety"]},
+      {"title":"Accommodation & Hotels","topics":["Accommodation types","Reservations and facilities","Suppliers","Booking platforms"]},
+      {"title":"Water Transport","topics":["Cruises and ferries","Booking procedures","Destinations and itineraries","Onboard services"]},
+      {"title":"Tour Packages","topics":["FIT and GIT","Package components and costing","Itinerary development","Agency packaging"]},
+      {"title":"Serving the Travel Customer","topics":["Customer expectations","Complaint handling","Cultural etiquette","Sales and upselling"]},
+      {"title":"Fundamentals of Air Fares and Ticketing","topics":["Fare types","Basic fare rules","Introduction to GDS","Itineraries and pricing"]}
+    ],
+    "outcomes":["Explain the structure and career pathways of the travel and tourism industry","Apply global geography, IATA areas, time zones and cultural awareness","Recognise essential travel documents, formalities and safety requirements","Compare air, land and water transport options","Support accommodation reservations and supplier coordination","Develop and cost basic tour packages and itineraries","Deliver professional travel-customer service and sales support","Understand fare types, ticketing foundations and introductory GDS concepts"]
   }
 ]
