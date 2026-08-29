@@ -2270,7 +2270,7 @@
   {
     "code":"REAL ESTATE COMPLIANCE","title":"Compliance for the UAE Real Estate Sector","slug":"compliance-uae-real-estate-sector","strapline":"Recognise property risk. Report correctly. Stay inspection-ready.",
     "summary":"A practical UAE real-estate compliance course focused on customer due diligence, property-transaction red flags, REAR and STR/SAR reporting through goAML, and AML inspection readiness.",
-    "cover":"/images/compliance-uae-real-estate-sector.jpg","hero":"/images/compliance-uae-real-estate-sector.jpg","heroFit":"contain","file":"/brochures/compliance-uae-real-estate-sector.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "cover":"/images/compliance-uae-real-estate-sector.jpg","hero":"/images/compliance-uae-real-estate-sector.jpg","heroFit":"cover","file":"/brochures/compliance-uae-real-estate-sector.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
     "qualification":["No prior AML qualification is required","Designed for UAE property sales and compliance environments"],
     "audience":["Real-estate brokers and agents","Sales managers","Compliance officers","Business owners and administrators"],
     "benefits":["Verify customers and beneficial owners","Recognise suspicious property transactions","Apply REAR and STR/SAR reporting routes","Document source-of-funds and payment concerns","Prepare real-estate files for inspection"],
