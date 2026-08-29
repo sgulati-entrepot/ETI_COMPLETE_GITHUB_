@@ -2130,5 +2130,174 @@
       {"title":"Fundamentals of Air Fares and Ticketing","topics":["Fare types","Basic fare rules","Introduction to GDS","Itineraries and pricing"]}
     ],
     "outcomes":["Explain the structure and career pathways of the travel and tourism industry","Apply global geography, IATA areas, time zones and cultural awareness","Recognise essential travel documents, formalities and safety requirements","Compare air, land and water transport options","Support accommodation reservations and supplier coordination","Develop and cost basic tour packages and itineraries","Deliver professional travel-customer service and sales support","Understand fare types, ticketing foundations and introductory GDS concepts"]
+  },
+  {
+    "code":"VASP COMPLIANCE","title":"Compliance for Virtual Asset Businesses","slug":"compliance-virtual-asset-businesses","strapline":"Navigate digital-asset risk with confidence and regulatory clarity.",
+    "summary":"A focused compliance programme for virtual asset businesses, connecting UAE regulatory expectations with practical customer, wallet, transaction-monitoring, sanctions and reporting controls.",
+    "cover":"/images/compliance-virtual-asset-businesses.jpg","hero":"/images/compliance-virtual-asset-businesses.jpg","heroFit":"cover","file":"/brochures/compliance-virtual-asset-businesses.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior blockchain compliance qualification is required","Basic familiarity with virtual assets or financial crime compliance is helpful"],
+    "audience":["Virtual asset and VASP compliance teams","KYC and AML professionals","Blockchain transaction-monitoring teams","Risk, operations and internal-audit professionals"],
+    "benefits":["Connect customer identity with wallet activity","Identify unusual blockchain transaction patterns","Assess wallet, counterparty and sanctions exposure","Apply Travel Rule and STR/SAR workflows","Prepare evidence for regulatory inspections"],
+    "modules":[
+      {"title":"UAE Virtual Asset AML Framework","topics":["Core regulatory framework","Structured compliance responsibilities"]},
+      {"title":"Customer KYC & Wallet Due Diligence","topics":["Customer identification and verification","Linking identity to wallet activity"]},
+      {"title":"Blockchain Transaction Monitoring","topics":["Transaction patterns and unusual movement","Review and escalation"]},
+      {"title":"Wallet, Counterparty & Sanctions Risk","topics":["Wallet and counterparty assessment","Sanctions exposure"]},
+      {"title":"Travel Rule & STR/SAR Reporting","topics":["Travel Rule requirements","Documentation, escalation and reporting"]},
+      {"title":"Regulatory Inspection Readiness","topics":["Evidence and records","Consistent inspection-ready processes"]}
+    ],
+    "outcomes":["Identify customer, wallet and sanctions risk","Monitor blockchain transactions effectively","Apply Travel Rule and STR/SAR requirements","Maintain inspection-ready compliance records"]
+  },
+  {
+    "code":"TRADE COMPLIANCE","title":"Compliance for UAE Trading Companies","slug":"compliance-uae-trading-companies","strapline":"Control trade risk from counterparty onboarding to cross-border payment.",
+    "summary":"A practical UAE compliance programme for trading companies covering AML, trade-based money laundering, counterparty due diligence, documentary controls, sanctions and audit readiness.",
+    "cover":"/images/compliance-uae-trading-companies.jpg","hero":"/images/compliance-uae-trading-companies.jpg","heroFit":"cover","file":"/brochures/compliance-uae-trading-companies.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior compliance qualification is required","Useful for professionals involved in UAE trading operations"],
+    "audience":["Business owners and management","Finance and compliance teams","Procurement and sales professionals","Logistics, import and export teams","Internal auditors"],
+    "benefits":["Recognise trade-based money-laundering risks","Strengthen customer, supplier and UBO due diligence","Validate documents and payments consistently","Screen sanctions and proliferation-financing exposure","Prepare trading-company records for audit"],
+    "modules":[
+      {"title":"UAE AML & Trade Compliance Framework","topics":["UAE AML/CFT/CPF requirements","TBML, sanctions and organisational roles"]},
+      {"title":"Customer, Supplier & Counterparty Due Diligence","topics":["KYC, supplier and UBO checks","PEP, sanctions, country risk and commercial purpose"]},
+      {"title":"TBML Red Flags","topics":["Over- and under-invoicing","False shipments, routing and third-party payments"]},
+      {"title":"Document & Payment Controls","topics":["Invoices, purchase orders and packing lists","Transport, customs and payment records"]},
+      {"title":"Sanctions & Suspicious Activity","topics":["UAE and UN screening","Dual-use, escalation and record keeping"]},
+      {"title":"Compliance Audit Readiness","topics":["Policies, due diligence and screening evidence","Training, review and corrective actions"]}
+    ],
+    "outcomes":["Identify TBML and sanctions red flags","Complete risk-based counterparty checks","Review trade documents and payments","Maintain audit-ready compliance evidence"]
+  },
+  {
+    "code":"TCSP COMPLIANCE","title":"Compliance for Trust & Company Service Providers","slug":"compliance-trust-company-service-providers","strapline":"See through complex structures and protect corporate-service integrity.",
+    "summary":"A sector-specific UAE AML programme for trust and company service providers, focused on beneficial ownership, complex structures, goAML reporting, sanctions and inspection readiness.",
+    "cover":"/images/compliance-trust-company-service-providers.jpg","hero":"/images/compliance-trust-company-service-providers.jpg","heroFit":"cover","file":"/brochures/compliance-trust-company-service-providers.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior TCSP compliance qualification is required","Suitable for professionals supporting corporate structures and DNFBP controls"],
+    "audience":["Trust and company service providers","Company-formation professionals","DNFBP compliance teams","Compliance officers and management"],
+    "benefits":["Map ownership and identify ultimate beneficial owners","Recognise shell-company and nominee risks","Apply risk-based EDD to high-risk clients","Escalate and report through goAML","Prepare TCSP evidence for inspection"],
+    "modules":[
+      {"title":"UAE AML Framework for TCSPs","topics":["DNFBP and FIU/goAML requirements","Compliance officer and business-risk responsibilities"]},
+      {"title":"KYC, UBO & Corporate Structures","topics":["Ownership charts, nominees and trusts","PEP, sanctions and source-of-funds checks"]},
+      {"title":"TCSP AML Red Flags","topics":["Shell companies and complex ownership","Hidden beneficial ownership and third-party funding"]},
+      {"title":"STR/SAR & goAML","topics":["Suspicion and internal escalation","Reporting, tipping-off controls and retention"]},
+      {"title":"Sanctions & High-Risk Clients","topics":["Targeted financial sanctions","High-risk jurisdictions and enhanced due diligence"]},
+      {"title":"Regulatory Inspection Readiness","topics":["Policies, assessments and client files","Screening, reporting and training evidence"]}
+    ],
+    "outcomes":["Assess ownership and corporate-structure risk","Identify sector-specific AML red flags","Apply sanctions and enhanced-due-diligence controls","Maintain inspection-ready TCSP files"]
+  },
+  {
+    "code":"FINTECH COMPLIANCE","title":"Compliance for Payment Services & FinTech","slug":"compliance-payment-services-fintech","strapline":"Secure digital payments with smarter onboarding, monitoring and escalation.",
+    "summary":"A practical compliance course for payment services and FinTech teams covering CBUAE expectations, digital KYC, transaction monitoring, fraud, mule accounts, sanctions and regulatory audits.",
+    "cover":"/images/compliance-payment-services-fintech.jpg","hero":"/images/compliance-payment-services-fintech.jpg","heroFit":"cover","file":"/brochures/compliance-payment-services-fintech.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior FinTech compliance qualification is required","A basic understanding of payments or AML is useful"],
+    "audience":["Compliance officers and MLROs","FinTech and payment-operations teams","Risk and fraud professionals","Internal auditors and management"],
+    "benefits":["Apply risk-based digital onboarding","Identify unusual payment patterns and mule accounts","Connect fraud indicators with AML escalation","Manage sanctions, PEP and reporting controls","Prepare for CBUAE regulatory review"],
+    "modules":[
+      {"title":"CBUAE AML Requirements for Payment Services","topics":["Applicable regulatory expectations","Compliance roles and controls"]},
+      {"title":"Digital KYC & Customer Risk Assessment","topics":["Digital identity verification","Customer risk rating"]},
+      {"title":"Payment Transaction Monitoring","topics":["Payment patterns and thresholds","Review, investigation and escalation"]},
+      {"title":"Fraud, Mule Accounts & AML Red Flags","topics":["Rapid payments and third-party funding","Suspicious onboarding and merchant activity"]},
+      {"title":"Sanctions, PEP & STR/SAR","topics":["Screening and escalation","Suspicious-activity reporting"]},
+      {"title":"Regulatory Audit Readiness","topics":["Policies, evidence and testing","Corrective actions and inspection preparation"]}
+    ],
+    "outcomes":["Assess digital customer risk","Monitor payment activity","Identify fraud and mule-account indicators","Maintain audit-ready reporting and controls"]
+  },
+  {
+    "code":"LEGAL COMPLIANCE","title":"Compliance for Legal Consultants & Law Firms","slug":"compliance-legal-consultants-law-firms","strapline":"Protect legal practice with proportionate, evidence-led AML controls.",
+    "summary":"A UAE AML programme for legal professionals addressing client due diligence, beneficial ownership, legal-service red flags, goAML reporting, sanctions and Ministry of Justice inspections.",
+    "cover":"/images/compliance-legal-consultants-law-firms.jpg","hero":"/images/compliance-legal-consultants-law-firms.jpg","heroFit":"cover","file":"/brochures/compliance-legal-consultants-law-firms.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior AML qualification is required","Designed for legal-practice and DNFBP environments"],
+    "audience":["Lawyers and legal consultants","Partners and compliance officers","Paralegals and administrators","Law-firm management"],
+    "benefits":["Apply client and beneficial-owner due diligence","Recognise risk in legal-service transactions","Report suspicion without tipping off","Screen sanctions and proliferation-financing exposure","Prepare for Ministry of Justice inspection"],
+    "modules":[
+      {"title":"UAE AML Framework for Legal Professionals","topics":["AML/CFT/CPF and Ministry of Justice requirements","DNFBP, FIU and goAML responsibilities"]},
+      {"title":"Client Due Diligence & Risk Assessment","topics":["KYC, UBO and customer-risk assessment","PEP, sanctions, source-of-funds and EDD"]},
+      {"title":"AML Risks & Red Flags in Legal Services","topics":["Company formation and complex ownership","Client accounts, third parties and property transactions"]},
+      {"title":"STR/SAR & goAML","topics":["Suspicion, review and escalation","Confidentiality, tipping off and evidence"]},
+      {"title":"Sanctions & Proliferation Financing","topics":["UAE and UN screening","Targeted financial sanctions and match handling"]},
+      {"title":"Ministry of Justice Inspection Readiness","topics":["Policies, risk assessments and client files","Training, reviews and corrective action"]}
+    ],
+    "outcomes":["Complete risk-based client due diligence","Identify legal-sector red flags","Handle reporting and confidentiality correctly","Maintain Ministry-ready compliance evidence"]
+  },
+  {
+    "code":"INSURANCE COMPLIANCE","title":"Compliance for the Insurance Sector","slug":"compliance-insurance-sector","strapline":"Strengthen protection across premiums, policies, claims and beneficiaries.",
+    "summary":"A sector-focused UAE insurance compliance programme covering CBUAE requirements, customer due diligence, insurance-specific red flags, goAML reporting, sanctions and inspection readiness.",
+    "cover":"/images/compliance-insurance-sector.jpg","hero":"/images/compliance-insurance-sector.jpg","heroFit":"cover","file":"/brochures/compliance-insurance-sector.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior insurance-compliance qualification is required","Useful for customer-facing, underwriting, claims and control functions"],
+    "audience":["Insurance staff, brokers and agents","Compliance officers and MLROs","Underwriting and claims teams","Internal auditors and management"],
+    "benefits":["Apply customer due diligence across insurance relationships","Recognise suspicious premium and policy activity","Escalate and report through goAML","Manage PEP, sanctions and proliferation-financing risk","Prepare insurance controls for CBUAE review"],
+    "modules":[
+      {"title":"UAE AML & CBUAE Framework for Insurance","topics":["Sector requirements","Roles and governance"]},
+      {"title":"Customer Due Diligence","topics":["Customer and beneficial-owner checks","Risk assessment and enhanced due diligence"]},
+      {"title":"Insurance AML Red Flags","topics":["Third-party premiums and early surrender","Beneficiary changes, policy assignment and unexplained funding"]},
+      {"title":"STR/SAR & goAML Reporting","topics":["Internal escalation","Reporting and record keeping"]},
+      {"title":"Sanctions, PEP & Proliferation Financing","topics":["Screening and match handling","High-risk relationships"]},
+      {"title":"CBUAE Audit & Inspection Readiness","topics":["Control evidence and testing","Inspection preparation"]}
+    ],
+    "outcomes":["Assess insurance-customer risk","Identify policy and premium red flags","Apply reporting and sanctions controls","Maintain inspection-ready records"]
+  },
+  {
+    "code":"ACCOUNTING COMPLIANCE","title":"Compliance for Independent Accountants & Auditors","slug":"compliance-independent-accountants-auditors","strapline":"Turn financial scrutiny into a stronger line of AML defence.",
+    "summary":"A practical UAE AML course for independent accountants and auditors, covering client due diligence, accounting red flags, audit responsibilities, goAML reporting and regulatory inspection readiness.",
+    "cover":"/images/compliance-independent-accountants-auditors.jpg","hero":"/images/compliance-independent-accountants-auditors.jpg","heroFit":"cover","file":"/brochures/compliance-independent-accountants-auditors.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior AML qualification is required","Designed for accounting, audit and financial-control professionals"],
+    "audience":["Independent accountants and auditors","Audit managers and partners","Compliance and finance teams","Practice management"],
+    "benefits":["Apply risk-based client due diligence","Recognise suspicious accounting entries and structures","Understand AML responsibilities during an audit","Escalate and report through goAML","Prepare files and controls for inspection"],
+    "modules":[
+      {"title":"UAE AML Framework for Accountants & Auditors","topics":["Applicable AML obligations","Professional roles and governance"]},
+      {"title":"Client Due Diligence & Risk Assessment","topics":["KYC and beneficial ownership","Risk rating and enhanced due diligence"]},
+      {"title":"AML Red Flags in Accounting & Audit","topics":["Related parties, fictitious suppliers and unusual entries","Cash, offshore structures and unexplained loans"]},
+      {"title":"STR/SAR & goAML Reporting","topics":["Suspicion and escalation","Reporting and evidence retention"]},
+      {"title":"AML Responsibilities During an Audit","topics":["Professional scepticism","Documentation and internal action"]},
+      {"title":"Regulatory Inspection & Audit Readiness","topics":["Policies and client files","Testing, training and corrective action"]}
+    ],
+    "outcomes":["Assess client and transaction risk","Identify accounting and audit red flags","Apply reporting responsibilities","Maintain inspection-ready documentation"]
+  },
+  {
+    "code":"DPMS COMPLIANCE","title":"Compliance for Dealers in Precious Metals & Stones","slug":"compliance-dpms","strapline":"Protect high-value trade with clear, practical AML controls.",
+    "summary":"A dedicated UAE compliance programme for dealers in precious metals and stones, covering customer due diligence, the AED 55,000 rule, DPMSR and STR/SAR reporting, red flags and inspection readiness.",
+    "cover":"/images/compliance-dpms.jpg","hero":"/images/compliance-dpms.jpg","heroFit":"cover","file":"/brochures/compliance-dpms.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior DPMS compliance qualification is required","Suitable for retail, wholesale and trading operations"],
+    "audience":["Jewellery businesses","Gold and bullion traders","Diamond and gemstone dealers","Compliance officers, owners and managers"],
+    "benefits":["Apply customer due diligence to high-value transactions","Understand the AED 55,000 threshold","Distinguish DPMSR from STR/SAR reporting","Recognise sector-specific red flags","Prepare for AML audit and inspection"],
+    "modules":[
+      {"title":"UAE AML Framework for DPMS","topics":["DNFBP obligations","Roles and risk-based controls"]},
+      {"title":"Customer Due Diligence","topics":["Customer and beneficial-owner verification","Risk assessment and enhanced checks"]},
+      {"title":"DPMS Transactions & AED 55,000 Rule","topics":["Threshold requirements","Linked and high-value transactions"]},
+      {"title":"DPMSR, STR/SAR & goAML","topics":["Reporting routes and triggers","Documentation and escalation"]},
+      {"title":"Key DPMS Red Flags","topics":["Unusual payment and ownership patterns","High-risk customers and jurisdictions"]},
+      {"title":"AML Audit & Inspection Readiness","topics":["Policies, files and training","Review and corrective action"]}
+    ],
+    "outcomes":["Complete DPMS customer due diligence","Apply the AED 55,000 rule","Identify and report suspicious transactions","Maintain inspection-ready controls"]
+  },
+  {
+    "code":"REAL ESTATE COMPLIANCE","title":"Compliance for the UAE Real Estate Sector","slug":"compliance-uae-real-estate-sector","strapline":"Recognise property risk. Report correctly. Stay inspection-ready.",
+    "summary":"A practical UAE real-estate compliance course focused on customer due diligence, property-transaction red flags, REAR and STR/SAR reporting through goAML, and AML inspection readiness.",
+    "cover":"/images/compliance-uae-real-estate-sector.jpg","hero":"/images/compliance-uae-real-estate-sector.jpg","heroFit":"contain","file":"/brochures/compliance-uae-real-estate-sector.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior AML qualification is required","Designed for UAE property sales and compliance environments"],
+    "audience":["Real-estate brokers and agents","Sales managers","Compliance officers","Business owners and administrators"],
+    "benefits":["Verify customers and beneficial owners","Recognise suspicious property transactions","Apply REAR and STR/SAR reporting routes","Document source-of-funds and payment concerns","Prepare real-estate files for inspection"],
+    "modules":[
+      {"title":"UAE AML Framework for Real Estate","topics":["Sector obligations","Roles and risk-based approach"]},
+      {"title":"Customer Due Diligence","topics":["Customer and beneficial-owner checks","Risk assessment and source of funds"]},
+      {"title":"Real Estate Transaction Red Flags","topics":["Cash, third parties and overseas funds","Rapid resale, virtual assets and opaque ownership"]},
+      {"title":"REAR, STR/SAR & goAML","topics":["Reporting triggers and routes","Escalation and record keeping"]},
+      {"title":"AML Inspection Readiness","topics":["Policies and client files","Training and compliance evidence"]}
+    ],
+    "outcomes":["Identify customers and beneficial owners","Recognise suspicious property activity","Apply REAR and STR/SAR requirements","Maintain inspection-ready documentation"]
+  },
+  {
+    "code":"BANKING COMPLIANCE","title":"Compliance for Banks & Financial Institutions","slug":"compliance-banks-financial-institutions","strapline":"Build resilient financial-crime controls across the customer lifecycle.",
+    "summary":"A comprehensive CBUAE-focused AML programme for banks and financial institutions covering KYC, beneficial ownership, transaction monitoring, sanctions, goAML reporting and regulatory inspections.",
+    "cover":"/images/compliance-banks-financial-institutions.jpg","hero":"/images/compliance-banks-financial-institutions.jpg","heroFit":"cover","file":"/brochures/compliance-banks-financial-institutions.pdf","duration":"6 hours / 1 day","format":"Face-to-face or virtual instructor-led",
+    "qualification":["No prior banking-compliance qualification is required","A basic understanding of financial services is helpful"],
+    "audience":["Financial-sector compliance teams","MLROs and deputies","KYC and onboarding professionals","Transaction-monitoring and sanctions teams","Internal auditors"],
+    "benefits":["Apply CBUAE AML/CFT/CPF expectations","Strengthen KYC, UBO and customer risk rating","Identify suspicious transaction patterns","Manage PEP, sanctions and TFS controls","Prepare for CBUAE audit and inspection"],
+    "modules":[
+      {"title":"CBUAE AML/CFT/CPF Framework","topics":["Regulatory expectations","Governance and compliance responsibilities"]},
+      {"title":"KYC, CDD, UBO & Customer Risk Rating","topics":["Identity and beneficial ownership","Risk classification and enhanced due diligence"]},
+      {"title":"Transaction Monitoring","topics":["Layering, mule accounts and rapid funds movement","Cash, structuring and cross-border activity"]},
+      {"title":"PEPs, Sanctions & Targeted Financial Sanctions","topics":["Screening and match handling","High-risk relationships"]},
+      {"title":"STR/SAR & goAML","topics":["Investigation and internal escalation","Reporting and retention"]},
+      {"title":"CBUAE Audit & Regulatory Inspection Readiness","topics":["Control evidence and testing","Remediation and inspection preparation"]}
+    ],
+    "outcomes":["Apply risk-based KYC and customer rating","Monitor and investigate financial activity","Manage sanctions and reporting controls","Maintain CBUAE inspection-ready evidence"]
   }
 ]
