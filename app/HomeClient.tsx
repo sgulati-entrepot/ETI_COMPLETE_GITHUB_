@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-html-link-for-pages */
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { AboutMenu, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 
 const programs = [
@@ -18,6 +18,19 @@ export default function Home() {
   const [sending, setSending] = useState(false);
   const [formError, setFormError] = useState(false);
   const [program, setProgram] = useState("");
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    document.body.classList.add("mobile-nav-open");
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.classList.remove("mobile-nav-open");
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [menuOpen]);
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,14 +50,14 @@ export default function Home() {
 
   return (
     <main>
-      <header className="nav-shell">
+      <header className={menuOpen ? "nav-shell mobile-menu-open" : "nav-shell"}>
         <a href="#top" className="brand" aria-label="Entrepôt home">
           <img src="/entrepot-logo-transparent.png" alt="Entrepôt Training Institute" />
         </a>
-        <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
+        <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} aria-controls="home-navigation">
           <span/><span/>
         </button>
-        <nav className={menuOpen ? "open" : ""} aria-label="Main navigation">
+        <nav id="home-navigation" className={menuOpen ? "open" : ""} aria-label="Main navigation" onClick={(event) => { if ((event.target as HTMLElement).closest("a, .enquiry-lead-button")) setMenuOpen(false); }}>
           <AboutMenu/>
           <ProgramMenu/>
           <CorporateMenu/>

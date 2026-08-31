@@ -1,0 +1,81 @@
+/* Cross-device layout and navigation hardening. */
+html{overflow-x:clip;text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{min-width:0;overflow-x:clip}
+main,header,footer,section,article,aside,nav,form,fieldset,figure{min-width:0}
+img,video,svg,canvas,iframe{max-width:100%}
+img{height:auto}
+p,h1,h2,h3,h4,address,a{overflow-wrap:break-word}
+button,a,input,select,textarea{touch-action:manipulation}
+:focus-visible{outline:3px solid var(--gold1);outline-offset:3px}
+.mobile-nav-open{overflow:hidden!important;overscroll-behavior:none}
+
+@media(max-width:1280px){
+  .nav-shell{position:absolute;height:78px;padding:0 max(20px,4vw);z-index:100}
+  .nav-shell .brand{position:relative;z-index:102}
+  .nav-shell .brand img,.inner-nav .brand img{width:clamp(145px,21vw,184px);height:58px}
+  .menu-btn{display:grid;position:relative;z-index:102;min-width:48px;min-height:48px;place-content:center;gap:7px;padding:10px;border:0;color:#fff;cursor:pointer}
+  .menu-btn span{display:block;width:25px;height:1px;background:var(--gold1);transition:transform .25s ease,opacity .2s ease}
+  .mobile-menu-open .menu-btn span:first-child{transform:translateY(4px) rotate(45deg)}
+  .mobile-menu-open .menu-btn span:last-child{transform:translateY(-4px) rotate(-45deg)}
+  .nav-shell>nav{display:none;position:fixed;z-index:101;inset:0;width:100%;height:100dvh;min-height:100dvh;max-height:100dvh;padding:max(102px,calc(env(safe-area-inset-top) + 88px)) max(24px,7vw) max(40px,env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior:contain;background:#0b1909fa;backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;gap:0;font-size:14px}
+  .nav-shell>nav.open{display:flex}
+  .nav-shell>nav>a,.about-menu-trigger,.program-menu-trigger,.corporate-menu-trigger,.insights-menu-trigger{width:100%;min-height:56px;display:flex;align-items:center;justify-content:space-between;border:0;border-bottom:1px solid #ffffff1c;font-size:14px;text-align:left}
+  .about-menu,.program-menu,.corporate-menu,.insights-menu{width:100%;height:auto;display:block}
+  .about-dropdown,.program-dropdown,.corporate-dropdown,.insights-dropdown{position:static!important;inset:auto!important;width:100%!important;max-width:none!important;max-height:none!important;margin:0 0 12px!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:none!important;box-shadow:none!important;display:none!important}
+  .about-menu.submenu-open .about-dropdown,.program-menu.submenu-open .program-dropdown,.corporate-menu.submenu-open .corporate-dropdown,.insights-menu.submenu-open .insights-dropdown{display:block!important}
+  .program-group-grid,.corporate-dropdown-scroll{display:block!important;max-height:min(55dvh,520px)!important;overflow-y:auto!important;overscroll-behavior:contain}
+  .program-group{min-height:0!important;padding:0 16px!important;border-right:0!important}
+  .nav-shell .program-group-title{min-height:62px;grid-template-columns:30px minmax(0,1fr) 18px;align-items:center;padding:11px 0!important}
+  .program-group-title strong{font-size:16px;line-height:1.2}
+  .program-group-title i{font-size:14px!important}
+  .program-group-title i:before{content:none!important}
+  .program-group-courses{display:none!important;padding:4px 0 15px 30px!important}
+  .program-group.group-open .program-group-courses{display:grid!important}
+  .nav-shell .program-group-courses>a{min-height:42px;display:flex;align-items:center;padding:8px!important;font-size:12px!important}
+  .corporate-dropdown-scroll{grid-template-columns:1fr!important}
+  .corporate-dropdown-scroll section{padding:18px;border-right:0}
+  .corporate-dropdown-head,.program-dropdown-head{padding:18px;align-items:flex-start}
+  .corporate-dropdown-head strong,.program-dropdown-head strong{font-size:20px}
+  .nav-socials{display:flex!important;flex-wrap:wrap;gap:8px!important;margin:22px 0 8px}
+  .nav-shell .nav-socials>a{width:44px!important;height:44px!important;flex:0 0 44px!important;display:grid!important;place-items:center!important;border:1px solid #e9c95a66!important;border-radius:50%!important;font-size:0!important}
+  .nav-shell .nav-socials>a svg{width:21px;height:21px}
+  .nav-shell .enquiry-lead-button{width:100%!important;min-height:52px;margin-top:14px;justify-content:space-between}
+}
+
+@media(min-width:801px) and (max-width:1280px){
+  .nav-shell>nav{padding-inline:max(40px,10vw)}
+  .nav-shell>nav>a,.about-menu-trigger,.program-menu-trigger,.corporate-menu-trigger,.insights-menu-trigger{font-size:15px}
+  .program-dropdown-head,.corporate-dropdown-head{position:sticky;top:0;z-index:3}
+}
+
+@media(max-width:800px){
+  .section-pad{padding:clamp(62px,16vw,82px) max(20px,6vw)}
+  .hero,.programs-hero,.corporate-hero,.course-hero,.brochure-web-hero,.about-hero,.people-hero,.contact-page-hero,.testimonials-hero,.blog-hero,.aviation-article-hero,.editorial-page-hero,.policy-hero,.awards-page-hero{padding-inline:max(20px,6vw)}
+  .hero-actions,.brochure-actions,.contact-hero-actions{gap:14px}
+  .hero-actions>a,.brochure-actions>a,.contact-hero-actions>a,.editorial-page-hero .btn-gold,.editorial-cta .btn-gold{max-width:100%}
+  input,select,textarea{font-size:16px!important}
+  .lead-modal{padding:max(10px,env(safe-area-inset-top)) 10px max(10px,env(safe-area-inset-bottom))}
+  .lead-dialog{width:100%;max-height:calc(100dvh - 20px);overscroll-behavior:contain}
+  .lead-dialog-intro{padding:38px 24px 30px}
+  .site-footer-grid,.footer-bottom,.footer-links,.footer-payments{min-width:0}
+  .footer-socials{display:flex;flex-wrap:wrap;gap:10px}
+  .footer-socials a{min-width:44px;min-height:44px}
+  .footer-payments>div{display:grid;grid-template-columns:repeat(2,minmax(0,96px));width:100%}
+  .footer-payments img{width:100%}
+}
+
+@media(max-width:390px){
+  .section-pad{padding-inline:18px}
+  .hero,.programs-hero,.corporate-hero,.course-hero,.brochure-web-hero,.about-hero,.people-hero,.contact-page-hero,.testimonials-hero,.blog-hero,.aviation-article-hero,.editorial-page-hero,.policy-hero,.awards-page-hero{padding-inline:18px}
+  .hero h1.hero-career-title{font-size:clamp(34px,10.5vw,40px)}
+  .program-list article{grid-template-columns:56px minmax(0,1fr) 38px}
+  .program-thumb{width:56px;height:64px}
+  .contact-lead-form,.contact-lead-success{padding:28px 18px}
+  .real-map-tabs button{padding:14px 8px;font-size:9px;letter-spacing:.08em}
+  .map-location-badge{max-width:calc(100% - 24px)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

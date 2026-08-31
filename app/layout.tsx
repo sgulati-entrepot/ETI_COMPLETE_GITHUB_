@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "./responsive.css";
 
 const META_PIXEL_ID = "1976753683143225";
 const GOOGLE_ANALYTICS_ID = "G-HXL51X2GTS";
