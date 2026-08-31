@@ -6,6 +6,7 @@ import "./globals.css";
 const META_PIXEL_ID = "1976753683143225";
 const GOOGLE_ANALYTICS_ID = "G-HXL51X2GTS";
 const GOOGLE_ADS_ID = "AW-18398125830";
+const ZOHO_SALESIQ_WIDGET = "https://salesiq.zohopublic.in/widget?wc=siq575bcf63317e6897cf385d77a97ed68f06ea585966d085a30022929035fea5e3bdc27d7bb244c497498f653c230c3f0d";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,6 +66,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${META_PIXEL_ID}');fbq('track','PageView');`,
           }}
+        />
+        <Script
+          id="zoho-salesiq-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: "window.$zoho=window.$zoho||{};$zoho.salesiq=$zoho.salesiq||{ready:function(){}};",
+          }}
+        />
+        <Script
+          id="zsiqscript"
+          src={ZOHO_SALESIQ_WIDGET}
+          strategy="afterInteractive"
         />
         <noscript><img height="1" width="1" style={{display:"none"}} src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`} alt=""/></noscript>
         {children}
