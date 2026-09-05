@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
 import { FormEvent, useEffect, useState } from "react";
-import { AboutMenu, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
+import { AboutMenu, CAMSRegistrationLeadButton, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 
 const programs = [
   { no: "01", slug: "leadership-management", title: "Leadership & Management", image:"/images/course-leadership.png", text: "Build decisive leaders who inspire teams, navigate change and deliver measurable outcomes.", meta: "12 WEEKS · HYBRID" },
@@ -63,6 +63,7 @@ export default function Home() {
           <CorporateMenu/>
           <InsightsMenu/>
           <a href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
+          <CAMSRegistrationLeadButton/>
           <a href="/student-registration" className="register-nav-link" onClick={() => setMenuOpen(false)}>Register Now</a>
           <div className="nav-socials"><InstagramLink/><LinkedInLink/><YouTubeLink/><FacebookLink/><WhatsAppLink/></div>
           <EnquiryLeadButton/>
