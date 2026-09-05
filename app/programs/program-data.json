@@ -2299,5 +2299,59 @@
       {"title":"CBUAE Audit & Regulatory Inspection Readiness","topics":["Control evidence and testing","Remediation and inspection preparation"]}
     ],
     "outcomes":["Apply risk-based KYC and customer rating","Monitor and investigate financial activity","Manage sanctions and reporting controls","Maintain CBUAE inspection-ready evidence"]
+  },
+  {
+    "code": "AML",
+    "title": "AML Compliance Training",
+    "slug": "aml-compliance-training",
+    "strapline": "Regulatory compliance. Customer monitoring. Financial security.",
+    "summary": "Money laundering and terrorist financing pose significant risks to financial institutions, designated non-financial businesses and professions, and organisations operating in regulated sectors. This practical AML Compliance Training programme builds a clear understanding of Anti-Money Laundering, Counter Financing of Terrorism and Counter Proliferation Financing requirements in line with UAE regulations, FATF Recommendations and international standards. Participants learn to assess financial-crime risk, conduct customer due diligence, monitor transactions, identify suspicious activity, meet reporting obligations and support effective organisational controls and governance.",
+    "cover": "/images/aml-compliance-training.jpg",
+    "hero": "/images/aml-compliance-training.jpg",
+    "heroFit": "cover",
+    "file": "/brochures/aml-compliance-training.pdf",
+    "duration": "Practical 8-module AML compliance pathway",
+    "format": "Face-to-face, virtual or hybrid learning",
+    "qualification": [
+      "No prior AML experience is required",
+      "Basic knowledge of banking, finance, compliance or business operations is beneficial but not mandatory",
+      "Suitable for professionals seeking to strengthen their understanding of AML compliance requirements"
+    ],
+    "audience": [
+      "Compliance officers",
+      "AML analysts",
+      "Banking and financial-services professionals",
+      "Internal auditors",
+      "Risk-management professionals",
+      "Finance and accounting professionals",
+      "DNFBP professionals",
+      "Business owners and senior management",
+      "Professionals responsible for regulatory compliance"
+    ],
+    "benefits": [
+      "Develop a practical understanding of AML, CFT and CPF obligations",
+      "Identify, assess and mitigate money-laundering risks",
+      "Understand UAE AML regulations, FATF Recommendations and regulatory expectations",
+      "Build practical skills in customer due diligence, transaction monitoring and suspicious-activity reporting",
+      "Strengthen organisational compliance through effective AML controls and governance"
+    ],
+    "modules": [
+      {"title":"Introduction to AML, CFT & CPF","topics":["Money-laundering concepts","Terrorist financing","Proliferation financing","Stages of money laundering","Global AML framework"]},
+      {"title":"UAE AML Regulatory Framework","topics":["Federal Decree-Law and Executive Regulations","UAE supervisory authorities","Regulatory expectations","FATF Recommendations","International AML standards"]},
+      {"title":"Risk-Based Approach","topics":["Enterprise-wide risk assessment","Customer risk assessment","Product and service risk","Geographic risk","Risk-mitigation measures"]},
+      {"title":"Customer Due Diligence (CDD)","topics":["Customer identification","Know Your Customer (KYC)","Beneficial ownership","Ongoing monitoring","Enhanced Due Diligence (EDD)"]},
+      {"title":"Transaction Monitoring & Reporting","topics":["Transaction monitoring","Red flags","Suspicious Transaction Reports (STR)","Suspicious Activity Reports (SAR)","Reporting obligations"]},
+      {"title":"Sanctions Compliance","topics":["UAE sanctions framework","UN sanctions","Targeted Financial Sanctions (TFS)","Sanctions screening","Asset-freezing requirements"]},
+      {"title":"Internal Controls & Governance","topics":["AML policies and procedures","Compliance programme","Record keeping","Staff training","Independent audit","Senior-management responsibilities"]},
+      {"title":"Practical Case Studies","topics":["Customer risk assessment","Transaction-monitoring scenarios","Suspicious-transaction identification","Regulatory case studies","Common compliance challenges"]}
+    ],
+    "outcomes": [
+      "Understand AML, CFT and CPF principles and regulatory requirements",
+      "Apply a risk-based approach to customer onboarding and monitoring",
+      "Conduct customer due diligence and enhanced due diligence procedures",
+      "Identify suspicious activities and fulfil reporting obligations",
+      "Support effective AML policies, controls and governance",
+      "Contribute to compliance with UAE AML regulations and international standards"
+    ]
   }
 ]
