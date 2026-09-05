@@ -1,18 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-
-const programmes = [
-  "Certified Management Accountant (CMA)", "Certified Procurement International Manager (CPIM)",
-  "Certified Procurement International Professional (CPIP)", "Certified International Supply Chain Manager (CISM)",
-  "Certified International Supply Chain Professional (CISP)", "Certified Human Resource Professional (CHRP)",
-  "UAE VAT Training", "UAE E-Invoicing Compliance Training", "Sales Professional with AI", "MLRO Training",
-  "AI Prompt Engineering Course", "AI Generalist Course", "Certified Accounting Professional (CAP)",
-  "GRC Professional Training", "Microsoft Power BI Training",
-  "Letter of Credit (LC) Training", "Hotel and Hospitality Management", "Export and Import Management",
-  "Executive Secretary / Office Administrator", "AML Compliance CPD for Exchange Houses",
-  "Certified Quantity Surveyor Training", "PRO Training", "Corporate Training Programme", "Other / Not sure yet",
-];
+import { programGroups } from "../components";
 
 export default function StudentRegistrationForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -41,7 +30,7 @@ export default function StudentRegistrationForm() {
       <label>Country of residence<input name="Country" type="text" autoComplete="country-name" required placeholder="Where do you live?" /></label>
     </div></fieldset>
     <fieldset><legend><span>02</span><div>Your programme<small>Help us guide your next step.</small></div></legend><div className="registration-grid">
-      <label className="wide">Programme<select name="Programme" required defaultValue=""><option value="" disabled>Select a programme</option>{programmes.map(programme => <option key={programme}>{programme}</option>)}</select></label>
+      <label className="wide">Programme<select name="Programme" required defaultValue=""><option value="" disabled>Select a programme</option>{programGroups.map(group => <optgroup key={group.slug} label={group.name}>{group.courses.map(([programme]) => <option key={programme} value={programme}>{programme}</option>)}</optgroup>)}<optgroup label="Other training requirements"><option>Corporate Training Programme</option><option>Other / Not sure yet</option></optgroup></select></label>
       <label>Preferred learning mode<select name="Preferred learning mode" required defaultValue=""><option value="" disabled>Select</option><option>Classroom</option><option>Live virtual</option><option>Hybrid</option><option>Flexible / advise me</option></select></label>
       <label>Preferred start date<input name="Preferred start date" type="date" /></label>
       <label>Highest qualification<input name="Highest qualification" type="text" placeholder="Degree, diploma or certification" /></label>
