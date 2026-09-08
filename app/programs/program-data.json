@@ -2353,5 +2353,61 @@
       "Support effective AML policies, controls and governance",
       "Contribute to compliance with UAE AML regulations and international standards"
     ]
+  },
+  {
+    "code": "CIA EXAM PREPARATION",
+    "title": "Certified Internal Auditor (CIA) Exam Preparation",
+    "slug": "certified-internal-auditor-exam-preparation",
+    "strapline": "Lead assurance. Strengthen trust.",
+    "summary": "The Certified Internal Auditor (CIA) is the globally recognised professional certification from The Institute of Internal Auditors (The IIA). This preparation programme builds the knowledge and practical judgement needed across internal auditing, governance, risk management, controls, fraud risk and engagement practice. It prepares participants with confidence for all three official CIA examination parts and supports career progression in Internal Audit, Risk, Governance, Compliance and Controls.",
+    "cover": "/images/certified-internal-auditor-exam-preparation.jpg",
+    "hero": "/images/certified-internal-auditor-exam-preparation.jpg",
+    "heroFit": "cover",
+    "file": "/brochures/certified-internal-auditor-exam-preparation.pdf",
+    "duration": "3 examination parts / flexible delivery",
+    "format": "Classroom, virtual or hybrid learning",
+    "qualification": [
+      "Bachelor's degree or higher",
+      "Final-year students may register and sit the examination",
+      "Alternative entry with five years of general internal-audit experience",
+      "Full certification experience requirements vary by qualification or IAP designation"
+    ],
+    "audience": [
+      "Internal auditors and aspiring audit professionals",
+      "Accountants, finance and GRC professionals",
+      "Risk, compliance and internal-control specialists",
+      "Senior auditors and audit managers"
+    ],
+    "benefits": [
+      "Prepare with confidence for all three official CIA examination parts",
+      "Apply Internal Audit principles and professional standards",
+      "Assess governance, risk-management and control effectiveness",
+      "Plan and conduct risk-based audit engagements",
+      "Strengthen evidence assessment, fraud-risk identification and reporting skills"
+    ],
+    "modules": [
+      {
+        "title": "CIA Part 1 - Internal Audit Fundamentals",
+        "topics": ["Foundations, purpose and role of Internal Audit", "Global Internal Audit Standards and the Internal Audit Charter", "Independence, objectivity, ethics and professionalism", "Governance, risk management and internal-control frameworks", "Fraud risks, prevention, detection and the Internal Auditor's role"]
+      },
+      {
+        "title": "CIA Part 2 - Internal Audit Engagement",
+        "topics": ["Engagement planning, objectives, scope and criteria", "Risk assessment and audit work programmes", "Information gathering, audit evidence and sampling techniques", "Data analysis, process mapping, documentation and workpapers", "Findings, recommendations, supervision, communication and reporting"]
+      },
+      {
+        "title": "CIA Part 3 - Internal Audit Function",
+        "topics": ["Internal Audit operations and risk-based audit planning", "Audit universe, resources, budgets and assurance coordination", "Quality assurance, assessments and performance measurement", "Results, monitoring and follow-up", "Business acumen, information technology, information security, data analytics and financial management"]
+      }
+    ],
+    "outcomes": [
+      "Apply Internal Audit principles and professional standards",
+      "Assess governance, risk-management and control effectiveness",
+      "Plan and conduct risk-based audit engagements",
+      "Analyse evidence, identify weaknesses and evaluate fraud risks",
+      "Prepare clear findings, recommendations and audit reports",
+      "Manage audit planning, resources, quality and follow-up",
+      "Apply relevant IT, information-security and business knowledge",
+      "Approach all three CIA examinations with greater confidence"
+    ]
   }
 ]
