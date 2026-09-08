@@ -1,14 +1,17 @@
 "use client";
 
-import {FormEvent,useState} from "react";
+import {FormEvent,useRef,useState} from "react";
 
 type Props={categories:string[]};
 
 export default function CorporateLeadForm({categories}:Props){
   const[status,setStatus]=useState<"idle"|"sending"|"sent"|"error">("idle");
+  const submissionInProgress=useRef(false);
 
   async function submit(event:FormEvent<HTMLFormElement>){
-    event.preventDefault();setStatus("sending");
+    event.preventDefault();
+    if(submissionInProgress.current)return;
+    submissionInProgress.current=true;setStatus("sending");
     const form=event.currentTarget;const data=new FormData(form);
     data.append("Lead source","Corporate Training landing page");
     data.append("_subject",`New corporate training lead - ${data.get("Training category")||"General enquiry"}`);
@@ -16,8 +19,14 @@ export default function CorporateLeadForm({categories}:Props){
     try{
       const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});
       if(!response.ok)throw new Error("Submission failed");
+      const gtag=(window as typeof window&{gtag?:(command:string,eventName:string,parameters:{send_to:string;value:number;currency:string})=>void}).gtag;
+      if(typeof gtag==="function")gtag("event","conversion",{
+        send_to:"AW-18398125830/CaK1CIvS9-YcEIa-9MRE",
+        value:1.0,
+        currency:"AED"
+      });
       form.reset();setStatus("sent");
-    }catch{setStatus("error")}
+    }catch{submissionInProgress.current=false;setStatus("error")}
   }
 
   return <section id="corporate-lead-capture" className="contact-lead-section corporate-lead-section section-pad">
@@ -28,7 +37,7 @@ export default function CorporateLeadForm({categories}:Props){
       <div><strong>Category-led guidance</strong><small>Route your enquiry to the most relevant training specialist.</small></div>
       <div><strong>Designed around your business</strong><small>Align content, delivery and outcomes with your team and industry.</small></div>
     </div>
-    {status==="sent"?<div className="contact-lead-success" role="status"><span>Thank you</span><h3>Your corporate training enquiry has been received.</h3><p>Our corporate learning team will contact you shortly.</p><button className="btn-gold" type="button" onClick={()=>setStatus("idle")}>Send another enquiry <b>↗</b></button></div>:
+    {status==="sent"?<div className="contact-lead-success" role="status"><span>Thank you</span><h3>Your corporate training enquiry has been received.</h3><p>Our corporate learning team will contact you shortly.</p><button className="btn-gold" type="button" onClick={()=>{submissionInProgress.current=false;setStatus("idle")}}>Send another enquiry <b>↗</b></button></div>:
     <form className="contact-lead-form" onSubmit={submit}>
       <div className="contact-lead-row"><label>Full name *<input name="Name" type="text" autoComplete="name" required placeholder="Your full name"/></label><label>Organisation *<input name="Organisation" type="text" autoComplete="organization" required placeholder="Company or organisation"/></label></div>
       <div className="contact-lead-row"><label>Business email *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>
