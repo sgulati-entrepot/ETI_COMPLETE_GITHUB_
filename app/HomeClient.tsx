@@ -29,6 +29,7 @@ export default function Home() {
   const [sending, setSending] = useState(false);
   const [formError, setFormError] = useState(false);
   const [program, setProgram] = useState("");
+  const [showWelcomeBanner, setShowWelcomeBanner] = useState(false);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -42,6 +43,17 @@ export default function Home() {
       window.removeEventListener("keydown", closeOnEscape);
     };
   }, [menuOpen]);
+
+  useEffect(() => {
+    if (window.sessionStorage.getItem("eti-communication-storytelling-banner-v1")) return;
+    const timer = window.setTimeout(() => setShowWelcomeBanner(true), 1400);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  function dismissWelcomeBanner() {
+    window.sessionStorage.setItem("eti-communication-storytelling-banner-v1", "true");
+    setShowWelcomeBanner(false);
+  }
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -80,6 +92,19 @@ export default function Home() {
           <EnquiryLeadButton/>
         </nav>
       </header>
+
+      {showWelcomeBanner && (
+        <aside className="welcome-programme-banner" role="dialog" aria-modal="false" aria-labelledby="welcome-programme-title">
+          <button type="button" className="welcome-banner-close" onClick={dismissWelcomeBanner} aria-label="Close programme announcement">×</button>
+          <span>Featured professional programme</span>
+          <h2 id="welcome-programme-title">Effective Communication and <em>Storytelling Skills</em></h2>
+          <p>Communicate with clarity, shape memorable messages and present ideas with greater confidence and influence.</p>
+          <div>
+            <a href="/corporate-training/courses/skills-development/storytelling-and-effective-presentation-skills" onClick={dismissWelcomeBanner}>Explore programme <b>↗</b></a>
+            <a href="#contact" onClick={dismissWelcomeBanner}>Enquire now <b>→</b></a>
+          </div>
+        </aside>
+      )}
 
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true"/>
