@@ -5,9 +5,9 @@ import { FormEvent, useEffect, useState } from "react";
 import { AboutMenu, CAMSRegistrationLeadButton, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 
 const programs = [
-  { no: "01", slug: "leadership-management", title: "Leadership & Management", image:"/images/course-leadership.png", text: "Build decisive leaders who inspire teams, navigate change and deliver measurable outcomes.", meta: "12 WEEKS · HYBRID" },
-  { no: "02", slug: "professional-excellence", title: "Professional Excellence", image:"/images/course-professional-excellence.png", text: "Master communication, executive presence and the practical skills that distinguish exceptional professionals.", meta: "8 WEEKS · IN-PERSON" },
-  { no: "03", slug: "business-entrepreneurship", title: "Business & Entrepreneurship", image:"/images/course-entrepreneurship.png", text: "Turn ambitious ideas into resilient ventures through strategy, finance and market-led execution.", meta: "16 WEEKS · HYBRID" },
+  { no: "01", slug: "leadership-management", title: "Leadership & Management", image:"/images/course-leadership.png", text: "Strengthen the judgement, communication and people-leadership capabilities your organisation needs next.", meta: "12 WEEKS · HYBRID" },
+  { no: "02", slug: "professional-excellence", title: "Professional Excellence", image:"/images/course-professional-excellence.png", text: "Build confident communication, executive presence and practical effectiveness across professional teams.", meta: "8 WEEKS · IN-PERSON" },
+  { no: "03", slug: "business-entrepreneurship", title: "Business & Entrepreneurship", image:"/images/course-entrepreneurship.png", text: "Develop stronger commercial thinking, ownership and execution for people responsible for growth.", meta: "16 WEEKS · HYBRID" },
 ];
 
 const optimizedImage = (src: string, width = 900, quality = 76) => `/.netlify/images?url=${src}&w=${width}&q=${quality}`;
@@ -38,7 +38,8 @@ export default function Home() {
     setFormError(false);
     const form=e.currentTarget;
     const data=new FormData(form);
-    data.append("_subject","New website programme enquiry");
+    data.append("Lead source","Main website homepage");
+    data.append("_subject","New homepage L&D training enquiry");
     data.append("_template","table");
     data.append("_captcha","false");
     try{
@@ -74,15 +75,15 @@ export default function Home() {
         <div className="hero-photo" aria-hidden="true"/>
         <div className="hero-orb orb-one"/><div className="hero-orb orb-two"/>
         <div className="hero-content">
-          <p className="eyebrow"><i/> Gateway to Excellence</p>
+          <p className="eyebrow"><i/> Corporate learning for ambitious organisations</p>
           <h1 className="hero-career-title">
-            Practical Training That Builds Skills,<br/>
-            Advances Careers and <em>Strengthens Organizations.</em>
+            Turn workforce capability into<br/>
+            <em>business performance.</em>
           </h1>
-          <p className="hero-copy">Elevated learning experiences designed for professionals who are ready to lead with clarity, confidence and purpose.</p>
+          <p className="hero-copy">Customised, practitioner-led training for L&amp;D leaders who need learning aligned to business priorities, relevant to work and credible with stakeholders.</p>
           <div className="hero-actions">
-            <a href="/programs" className="btn-gold">Explore programs <span>↗</span></a>
-            <a href="#about" className="text-link">Discover our story <span>→</span></a>
+            <a href="#contact" className="btn-gold">Request a tailored recommendation <span>↗</span></a>
+            <a href="/customised-corporate-training" className="text-link">Explore corporate solutions <span>→</span></a>
           </div>
         </div>
         <div className="hero-note">
@@ -92,16 +93,16 @@ export default function Home() {
       </section>
 
       <section id="about" className="manifesto section-pad">
-        <div className="section-kicker">01 / Our Philosophy</div>
+        <div className="section-kicker">01 / Built for L&amp;D leaders</div>
         <div className="manifesto-grid">
-          <h2>Education that<br/><em>moves you forward.</em></h2>
+          <h2>A learning partner<br/><em>your stakeholders can trust.</em></h2>
           <div>
-            <p className="lead">We believe real learning changes more than what you know. It changes how you think, decide and lead.</p>
-            <p>Entrepôt Training Institute brings together experienced practitioners, rigorous thinking and immersive learning to create development that stays with you long after the programme ends.</p>
+            <p className="lead">Bring us the business priority. We help you turn it into a focused learning response for the people who must deliver it.</p>
+            <p>Entrepôt combines practitioner expertise, relevant application and flexible delivery to help L&amp;D teams build credible programmes around real capability gaps—not generic course requests.</p>
             <div className="stats">
-              <div><strong>Expert</strong><span>Practitioner-led learning</span></div>
-              <div><strong>Applied</strong><span>Built for the real world</span></div>
-              <div><strong>Personal</strong><span>Designed around growth</span></div>
+              <div><strong>Aligned</strong><span>To your business priority</span></div>
+              <div><strong>Applied</strong><span>To the realities of work</span></div>
+              <div><strong>Adaptable</strong><span>To teams and locations</span></div>
             </div>
           </div>
         </div>
@@ -109,8 +110,8 @@ export default function Home() {
 
       <section id="programs" className="programs section-pad">
         <div className="section-head">
-          <div><div className="section-kicker light">02 / Signature Programs</div><h2>Choose your next<br/><em>chapter.</em></h2></div>
-          <p>Focused programs. Lasting capability. Each journey is designed to turn insight into confident action.</p>
+          <div><div className="section-kicker light">02 / Capability priorities</div><h2>Start with what your<br/><em>business needs next.</em></h2></div>
+          <p>Explore high-impact learning areas or brief us on the capability gap you need to address across your organisation.</p>
         </div>
         <div className="program-list">
           {programs.map((item) => (
@@ -127,25 +128,25 @@ export default function Home() {
 
       <section id="method" className="method section-pad">
         <div className="method-card">
-          <div className="section-kicker">03 / The Entrepôt Method</div>
-          <h2>Learning, refined.</h2>
-          <p>Our method creates space to question, practise and grow—connecting expert guidance with the realities of your work.</p>
+          <div className="section-kicker">03 / From brief to application</div>
+          <h2>A clearer route from need to impact.</h2>
+          <p>Our approach keeps the programme connected to the business priority, learner context and workplace outcome it was designed to support.</p>
           <div className="method-steps">
-            <div><span>01</span><h3>Discover</h3><p>Clarify your goals and unlock a deeper understanding of where you are.</p></div>
-            <div><span>02</span><h3>Develop</h3><p>Build capability through insight, practice and meaningful feedback.</p></div>
-            <div><span>03</span><h3>Deliver</h3><p>Apply what you learn with confidence and create visible impact.</p></div>
+            <div><span>01</span><h3>Diagnose</h3><p>Clarify the priority, audience, capability gap and the evidence of success stakeholders need.</p></div>
+            <div><span>02</span><h3>Design</h3><p>Shape content, cases, activities and delivery around your organisation and operating context.</p></div>
+            <div><span>03</span><h3>Deliver</h3><p>Create practical learning that builds confidence and supports application beyond the classroom.</p></div>
           </div>
         </div>
-        <blockquote>“The beautiful thing about learning is that no one can take it away from you.”<cite>— B.B. King</cite></blockquote>
+        <blockquote>“Learning earns its place when people can use it—and the business can see why it matters.”<cite>— The Entrepôt approach</cite></blockquote>
       </section>
 
       <section id="accreditations" className="accreditations section-pad">
         <div className="accreditations-head">
           <div>
-            <div className="section-kicker">04 / Accreditations &amp; Affiliations</div>
-            <h2>Standards recognised.<br/><em>Connections that matter.</em></h2>
+            <div className="section-kicker">04 / Quality signals</div>
+            <h2>Confidence backed by<br/><em>credible standards.</em></h2>
           </div>
-          <p>Our quality standards and professional affiliations connect ETI with respected international and regional learning networks.</p>
+          <p>ETI&apos;s quality standards and professional affiliations help L&amp;D teams choose a learning partner with recognised regional and international connections.</p>
         </div>
         <div className="accreditation-grid">
           <article>
@@ -179,10 +180,10 @@ export default function Home() {
       <section id="awards" className="awards-recognition section-pad">
         <div className="awards-heading">
           <div>
-            <div className="section-kicker">05 / Awards &amp; Recognition</div>
-            <h2>Excellence,<br/><em>recognised.</em></h2>
+            <div className="section-kicker">05 / Partnerships &amp; recognition</div>
+            <h2>A learning partner built<br/><em>for lasting value.</em></h2>
           </div>
-          <p>A dedicated showcase for verified honours, industry acknowledgements and milestones that reflect ETI&apos;s commitment to purposeful, career-focused learning.</p>
+          <p>Explore the partnerships, acknowledgements and milestones that reflect ETI&apos;s commitment to rigorous, practical professional learning.</p>
         </div>
         <div className="awards-stage">
           <article>
@@ -208,35 +209,37 @@ export default function Home() {
       <section id="testimonials" className="home-testimonials section-pad">
         <div className="home-testimonials-image" aria-hidden="true"/>
         <div className="home-testimonials-copy">
-          <div className="section-kicker light">06 / Testimonials</div>
-          <h2>Experiences that<br/><em>move people forward.</em></h2>
-          <p>Discover what learners and organisations value about Entrepôt&apos;s practical, expert-led development programmes.</p>
-          <div className="home-testimonial-quote"><span>“</span><blockquote>Learning that builds confidence, strengthens capability and creates visible workplace value.</blockquote></div>
+          <div className="section-kicker light">06 / Learner experience</div>
+          <h2>Practical learning your<br/><em>people will value.</em></h2>
+          <p>See what learners and organisations say about Entrepôt&apos;s relevance, practitioner expertise and professional learning experience.</p>
+          <div className="home-testimonial-quote"><span>“</span><blockquote>Learning designed to build confidence, strengthen capability and support visible workplace application.</blockquote></div>
           <a className="btn-gold" href="/testimonials">Explore Testimonials <span>↗</span></a>
         </div>
       </section>
 
       <section id="contact" className="contact section-pad">
         <div className="contact-copy">
-          <div className="section-kicker light">07 / Begin Your Journey</div>
-          <h2>Your next level<br/>starts <em>here.</em></h2>
-          <p>Tell us where you want to go. Our programme advisors will help you find the learning experience that fits.</p>
+          <div className="section-kicker light">07 / Share your learning brief</div>
+          <h2>Turn your next priority<br/>into a <em>practical plan.</em></h2>
+          <p>Tell us what your organisation needs to strengthen. An ETI corporate learning specialist will help you identify a relevant programme, delivery format and next step.</p>
           <a href="mailto:courses@entrepot.ae">courses@entrepot.ae <span>↗</span></a>
         </div>
         {sent ? (
-          <div className="success"><span>✓</span><h3>Thank you.</h3><p>Your enquiry has been received. Our programme team will be in touch shortly.</p><button onClick={() => setSent(false)}>Send another enquiry</button></div>
+          <div className="success"><span>✓</span><h3>Your training brief is with us.</h3><p>Our corporate learning team will review your requirements and contact you to discuss the right next step.</p><button onClick={() => setSent(false)}>Send another enquiry</button></div>
         ) : (
           <form onSubmit={submit}>
-            <label>Full name<input required name="name" placeholder="Your name" /></label>
-            <label>Email address<input required type="email" name="email" placeholder="you@company.com" /></label>
-            <label>I&apos;m interested in
-              <select required value={program} onChange={(e) => setProgram(e.target.value)}>
-                <option value="">Select a program</option>{programs.map(p => <option key={p.no}>{p.title}</option>)}<option>Corporate training</option>
+            <label>Full name<input required name="name" autoComplete="name" placeholder="Your name" /></label>
+            <label>Work email<input required type="email" name="email" autoComplete="email" placeholder="you@company.com" /></label>
+            <label>Organisation<input required name="organisation" autoComplete="organization" placeholder="Company name" /></label>
+            <label>Priority learning area
+              <select required name="interest" value={program} onChange={(e) => setProgram(e.target.value)}>
+                <option value="">Select a priority area</option><option>Customised corporate training</option>{programs.map(p => <option key={p.no}>{p.title}</option>)}<option>Other / Not sure yet</option>
               </select>
             </label>
-            <label>Tell us about your goals<textarea name="message" placeholder="What would you like to achieve?" rows={3}/></label>
+            <label>What should this training help your people achieve?<textarea name="message" placeholder="Audience, capability gap, business objective or preferred delivery format" rows={3}/></label>
             {formError&&<p className="form-error" role="alert">We couldn&apos;t send your enquiry. Please email courses@entrepot.ae directly.</p>}
-            <button className="btn-gold" type="submit" disabled={sending}>{sending?"Sending…":"Submit enquiry"} <span>↗</span></button>
+            <button className="btn-gold" type="submit" disabled={sending}>{sending?"Sending…":"Request a tailored recommendation"} <span>↗</span></button>
+            <small>No generic mailing lists. Your details are used only to respond to this training enquiry.</small>
           </form>
         )}
       </section>

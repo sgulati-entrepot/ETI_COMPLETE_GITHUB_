@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
-const title = "Leading Training Institute in UAE | Entrepot Training Institute";
-const description = "ETI World is a premier training institute in the UAE offering leadership, management, and professional development programs designed for career growth.";
+const title = "Corporate Training for L&D Leaders in UAE | Entrepôt";
+const description = "Turn workforce capability priorities into practical corporate training aligned to your people, business context and rollout needs. Request a tailored ETI recommendation.";
 
 export const metadata: Metadata = {
   title,
