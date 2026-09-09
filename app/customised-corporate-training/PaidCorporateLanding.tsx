@@ -55,7 +55,8 @@ const clients=[
   ["Water Engineers","/images/client-water-engineers.png"],
   ["Trip Planners","/images/client-trip-planners.png"],
   ["Skyline","/images/client-skyline.png"],
-  ["HSNC Board","/images/client-hsnc-board.png"]
+  ["HSNC Board","/images/client-hsnc-board.png"],
+  ["Signify","/images/client-signify.png"]
 ];
 const methods=[
   ["01","Diagnose","Align on the business priority, audience, capability gap and the evidence stakeholders need."],

@@ -18,6 +18,7 @@ const clientLogos = [
   { name: "Trip Planners", image: "/images/client-trip-planners.png" },
   { name: "Skyline", image: "/images/client-skyline.png" },
   { name: "HSNC Board", image: "/images/client-hsnc-board.png" },
+  { name: "Signify", image: "/images/client-signify.png" },
 ];
 
 const optimizedImage = (src: string, width = 900, quality = 76) => `/.netlify/images?url=${src}&w=${width}&q=${quality}`;
