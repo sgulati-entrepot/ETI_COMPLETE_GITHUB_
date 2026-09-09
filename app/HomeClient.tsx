@@ -21,6 +21,29 @@ const clientLogos = [
   { name: "Signify", image: "/images/client-signify.png" },
 ];
 
+const welcomeProgrammes = [
+  {
+    eyebrow: "Featured professional programme",
+    title: "Effective Communication and",
+    accent: "Storytelling Skills",
+    copy: "Communicate with clarity, shape memorable messages and present ideas with greater confidence and influence.",
+    primaryLabel: "Explore programme",
+    primaryHref: "/corporate-training/courses/skills-development/storytelling-and-effective-presentation-skills",
+    secondaryLabel: "Enquire now",
+    secondaryHref: "#contact",
+  },
+  {
+    eyebrow: "CAMS examination preparation",
+    title: "Join the Ultimate CAMS Exam",
+    accent: "Preparation in Town!",
+    copy: "Build examination confidence with expert preparation and full assistance throughout your CAMS exam registration journey.",
+    primaryLabel: "Explore CAMS",
+    primaryHref: "/programs/certified-anti-money-laundering-specialist",
+    secondaryLabel: "Get registration assistance",
+    secondaryHref: "mailto:programs@entrepot.ae?subject=CAMS%20Exam%20Preparation%20and%20Registration%20Assistance",
+  },
+];
+
 const optimizedImage = (src: string, width = 900, quality = 76) => `/.netlify/images?url=${src}&w=${width}&q=${quality}`;
 
 export default function Home() {
@@ -30,6 +53,7 @@ export default function Home() {
   const [formError, setFormError] = useState(false);
   const [program, setProgram] = useState("");
   const [showWelcomeBanner, setShowWelcomeBanner] = useState(false);
+  const [welcomeSlide, setWelcomeSlide] = useState(0);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -45,13 +69,19 @@ export default function Home() {
   }, [menuOpen]);
 
   useEffect(() => {
-    if (window.sessionStorage.getItem("eti-communication-storytelling-banner-v1")) return;
+    if (window.sessionStorage.getItem("eti-featured-programmes-banner-v2")) return;
     const timer = window.setTimeout(() => setShowWelcomeBanner(true), 1400);
     return () => window.clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (!showWelcomeBanner) return;
+    const timer = window.setInterval(() => setWelcomeSlide(current => (current + 1) % welcomeProgrammes.length), 6000);
+    return () => window.clearInterval(timer);
+  }, [showWelcomeBanner]);
+
   function dismissWelcomeBanner() {
-    window.sessionStorage.setItem("eti-communication-storytelling-banner-v1", "true");
+    window.sessionStorage.setItem("eti-featured-programmes-banner-v2", "true");
     setShowWelcomeBanner(false);
   }
 
@@ -96,12 +126,21 @@ export default function Home() {
       {showWelcomeBanner && (
         <aside className="welcome-programme-banner" role="dialog" aria-modal="false" aria-labelledby="welcome-programme-title">
           <button type="button" className="welcome-banner-close" onClick={dismissWelcomeBanner} aria-label="Close programme announcement">×</button>
-          <span>Featured professional programme</span>
-          <h2 id="welcome-programme-title">Effective Communication and <em>Storytelling Skills</em></h2>
-          <p>Communicate with clarity, shape memorable messages and present ideas with greater confidence and influence.</p>
-          <div>
-            <a href="/corporate-training/courses/skills-development/storytelling-and-effective-presentation-skills" onClick={dismissWelcomeBanner}>Explore programme <b>↗</b></a>
-            <a href="#contact" onClick={dismissWelcomeBanner}>Enquire now <b>→</b></a>
+          <div className="welcome-banner-content" key={welcomeSlide} aria-live="polite">
+            <span>{welcomeProgrammes[welcomeSlide].eyebrow}</span>
+            <h2 id="welcome-programme-title">{welcomeProgrammes[welcomeSlide].title} <em>{welcomeProgrammes[welcomeSlide].accent}</em></h2>
+            <p>{welcomeProgrammes[welcomeSlide].copy}</p>
+            <div className="welcome-banner-actions">
+              <a href={welcomeProgrammes[welcomeSlide].primaryHref} onClick={dismissWelcomeBanner}>{welcomeProgrammes[welcomeSlide].primaryLabel} <b>↗</b></a>
+              <a href={welcomeProgrammes[welcomeSlide].secondaryHref} onClick={dismissWelcomeBanner}>{welcomeProgrammes[welcomeSlide].secondaryLabel} <b>→</b></a>
+            </div>
+          </div>
+          <div className="welcome-banner-controls" aria-label="Featured programmes">
+            <button type="button" onClick={() => setWelcomeSlide(current => (current - 1 + welcomeProgrammes.length) % welcomeProgrammes.length)} aria-label="Previous programme">←</button>
+            <div>
+              {welcomeProgrammes.map((item, index) => <button type="button" className={welcomeSlide === index ? "active" : ""} onClick={() => setWelcomeSlide(index)} aria-label={`Show ${item.accent}`} aria-current={welcomeSlide === index ? "true" : undefined} key={item.accent}/>) }
+            </div>
+            <button type="button" onClick={() => setWelcomeSlide(current => (current + 1) % welcomeProgrammes.length)} aria-label="Next programme">→</button>
           </div>
         </aside>
       )}
