@@ -3,6 +3,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { AboutMenu, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
+import { optimizedImage } from "./image";
 
 const programs = [
   { no: "01", slug: "leadership-management", title: "Leadership & Management", image:"/images/course-leadership.png", text: "Strengthen the judgement, communication and people-leadership capabilities your organisation needs next.", meta: "12 WEEKS · HYBRID" },
@@ -47,8 +48,6 @@ const welcomeProgrammes = [
     secondaryHref: "mailto:programs@entrepot.ae?subject=CAMS%20Exam%20Preparation%20and%20Registration%20Assistance",
   },
 ];
-
-const optimizedImage = (src: string, width = 900, quality = 76) => `/.netlify/images?url=${src}&w=${width}&q=${quality}`;
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -131,7 +130,7 @@ export default function Home() {
         <aside className="welcome-programme-banner" role="dialog" aria-modal="false" aria-labelledby="welcome-programme-title">
           <button type="button" className="welcome-banner-close" onClick={dismissWelcomeBanner} aria-label="Close programme announcement">×</button>
           <div className="welcome-banner-image" key={`image-${welcomeSlide}`}>
-            <img src={welcomeProgrammes[welcomeSlide].image} alt={welcomeProgrammes[welcomeSlide].imageAlt}/>
+            <img src={optimizedImage(welcomeProgrammes[welcomeSlide].image, 960, 80)} alt={welcomeProgrammes[welcomeSlide].imageAlt} decoding="async"/>
           </div>
           <div className="welcome-banner-content" key={welcomeSlide} aria-live="polite">
             <span>{welcomeProgrammes[welcomeSlide].eyebrow}</span>
@@ -196,7 +195,7 @@ export default function Home() {
           <p>Selected organisations where ETI has successfully delivered professional learning—across education, healthcare, aviation, engineering and travel.</p>
         </div>
         <div className="client-logo-grid">
-          {clientLogos.map((client,index) => <figure key={client.name}><span>{String(index+1).padStart(2,"0")}</span><img src={client.image} alt={client.name} loading="lazy" decoding="async"/><figcaption>{client.name}</figcaption></figure>)}
+          {clientLogos.map((client,index) => <figure key={client.name}><span>{String(index+1).padStart(2,"0")}</span><img src={optimizedImage(client.image, 420, 82)} alt={client.name} loading="lazy" decoding="async"/><figcaption>{client.name}</figcaption></figure>)}
         </div>
       </section>
 

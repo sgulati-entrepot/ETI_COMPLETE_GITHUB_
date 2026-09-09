@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components";
+import { optimizedImage } from "../image";
 
 export const metadata: Metadata = {
   title: "Awards & Recognition | Entrepôt Training Institute",
@@ -40,7 +41,7 @@ export default function AwardsRecognitionPage(){return <main className="awards-p
     <span className="awards-page-mark">ETI · GATEWAY TO EXCELLENCE</span>
   </section>
   <section className="awards-page-intro section-pad"><div><span>Recognition Portfolio</span><h2>Credibility earned<br/>through meaningful work.</h2></div><div><p className="lead">For ETI, recognition is not the destination. It is evidence of the standards we bring to every learner, programme and professional partnership.</p><p>This portfolio is designed to present verified awards and acknowledgements with clarity—identifying the awarding organisation, recognition title and year as each milestone is formally published.</p></div></section>
-  <section className="awards-page-gallery">{recognition.map((item,i)=><article className={i%2?"award-feature award-feature-reverse":"award-feature"} key={item.no}><figure><img src={item.image} alt={item.alt} loading="lazy"/><span>{item.no}</span></figure><div><small>{item.label}</small><h2>{item.title}</h2><p>{item.text}</p><div className="award-verification"><span>Recognition record</span><strong>Verified details to be published</strong></div></div></article>)}</section>
+  <section className="awards-page-gallery">{recognition.map((item,i)=><article className={i%2?"award-feature award-feature-reverse":"award-feature"} key={item.no}><figure><img src={optimizedImage(item.image,1400,80)} alt={item.alt} loading="lazy"/><span>{item.no}</span></figure><div><small>{item.label}</small><h2>{item.title}</h2><p>{item.text}</p><div className="award-verification"><span>Recognition record</span><strong>Verified details to be published</strong></div></div></article>)}</section>
   <section className="awards-principles section-pad"><div className="section-kicker light">Our Recognition Standard</div><div><article><span>01</span><h3>Verified</h3><p>Every formal listing will identify its awarding body, title and year.</p></article><article><span>02</span><h3>Relevant</h3><p>Recognition will connect directly to learning quality, learner outcomes or industry contribution.</p></article><article><span>03</span><h3>Transparent</h3><p>Milestones will be presented clearly and without overstating their scope.</p></article></div></section>
   <section className="awards-page-cta"><div><span>Gateway to Excellence</span><h2>Build capability that<br/>earns recognition.</h2></div><div><p>Speak with our programme team about professional certification, corporate learning and upcoming cohorts.</p><a className="btn-gold" href="mailto:courses@entrepot.ae?subject=Awards and Recognition Enquiry">Contact our team <span>↗</span></a></div></section>
   <SiteFooter/>

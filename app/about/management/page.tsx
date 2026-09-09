@@ -1,9 +1,10 @@
 import {SiteFooter,SiteHeader} from "../../components";
+import { optimizedBackground, optimizedImage } from "../../image";
 
 export default function Management(){
   return <main>
     <SiteHeader/>
-    <section className="people-hero" style={{backgroundImage:"linear-gradient(90deg,rgba(14,27,10,.97),rgba(14,27,10,.75) 56%,rgba(14,27,10,.18)),url('/images/course-leadership.png')"}}>
+    <section className="people-hero" style={{backgroundImage:`linear-gradient(90deg,rgba(14,27,10,.97),rgba(14,27,10,.75) 56%,rgba(14,27,10,.18)),${optimizedBackground("/images/course-leadership.png",1920,78)}`}}>
       <div>
         <div className="section-kicker light">About Us / Management</div>
         <h1>Stewardship for<br/><em>lasting impact.</em></h1>
@@ -16,7 +17,7 @@ export default function Management(){
     </section>
     <section className="management-profile section-pad" aria-labelledby="sajeev-gulati">
       <div className="management-portrait">
-        <img src="/images/sajeev-gulati.jpg" alt="Sajeev Gulati, Chairman and Managing Director" decoding="async"/>
+        <img src={optimizedImage("/images/sajeev-gulati.jpg",1000,80)} alt="Sajeev Gulati, Chairman and Managing Director" loading="lazy" decoding="async"/>
         <span>Executive Leadership</span>
       </div>
       <div className="management-profile-copy">
@@ -28,7 +29,7 @@ export default function Management(){
     </section>
     <section className="management-profile management-profile-reverse management-profile-akriti section-pad" aria-labelledby="akriti-gulati">
       <div className="management-portrait">
-        <img src="/images/akriti-gulati.jpg" alt="Akriti Gulati, Co-Founder and Director" decoding="async"/>
+        <img src={optimizedImage("/images/akriti-gulati.jpg",1000,80)} alt="Akriti Gulati, Co-Founder and Director" loading="lazy" decoding="async"/>
         <span>Executive Leadership</span>
       </div>
       <div className="management-profile-copy">
