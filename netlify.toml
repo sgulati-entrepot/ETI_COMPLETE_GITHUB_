@@ -10,6 +10,36 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+[[redirects]]
+  from = "/certified-procurement-international-professional"
+  to = "/programs/certified-procurement-international-professional"
+  status = 301
+
+[[redirects]]
+  from = "/certified-international-supply-professional"
+  to = "/programs/certified-international-supply-chain-professional"
+  status = 301
+
+[[redirects]]
+  from = "/aviation-courses"
+  to = "/programs/airport-terminal-ramp-ground-handling-services"
+  status = 301
+
+[[redirects]]
+  from = "/passenger-ground-service"
+  to = "/programs/airport-passenger-ground-services"
+  status = 301
+
+[[redirects]]
+  from = "/freight-forwarding-operations"
+  to = "/programs/certified-freight-forwarding-professional"
+  status = 301
+
+[[redirects]]
+  from = "/cilt-level-6"
+  to = "/programs/cilt-level-5-supply-chain-operations-management"
+  status = 301
+
 [[headers]]
   for = "/_next/static/*"
   [headers.values]
