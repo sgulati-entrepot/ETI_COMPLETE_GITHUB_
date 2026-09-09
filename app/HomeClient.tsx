@@ -17,6 +17,7 @@ const clientLogos = [
   { name: "Water Engineers", image: "/images/client-water-engineers.png" },
   { name: "Trip Planners", image: "/images/client-trip-planners.png" },
   { name: "Skyline", image: "/images/client-skyline.png" },
+  { name: "HSNC Board", image: "/images/client-hsnc-board.png" },
 ];
 
 const optimizedImage = (src: string, width = 900, quality = 76) => `/.netlify/images?url=${src}&w=${width}&q=${quality}`;
@@ -120,11 +121,11 @@ export default function Home() {
       <section className="client-proof section-pad" aria-labelledby="client-proof-title">
         <div className="client-proof-copy">
           <div className="section-kicker">Selected organisations</div>
-          <h2 id="client-proof-title">Trusted in practice.<br/><em>Proven through delivery.</em></h2>
-          <p>ETI has successfully delivered professional learning for teams across respected organisations in education, healthcare, aviation, engineering and travel.</p>
+          <h2 id="client-proof-title">Learning delivered.<br/><em>Confidence earned.</em></h2>
+          <p>Selected organisations where ETI has successfully delivered professional learning—across education, healthcare, aviation, engineering and travel.</p>
         </div>
         <div className="client-logo-grid">
-          {clientLogos.map(client => <figure key={client.name}><img src={client.image} alt={client.name} loading="lazy" decoding="async"/><figcaption>{client.name}</figcaption></figure>)}
+          {clientLogos.map((client,index) => <figure key={client.name}><span>{String(index+1).padStart(2,"0")}</span><img src={client.image} alt={client.name} loading="lazy" decoding="async"/><figcaption>{client.name}</figcaption></figure>)}
         </div>
       </section>
 
