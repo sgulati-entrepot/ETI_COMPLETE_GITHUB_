@@ -3,8 +3,8 @@ import PaidCorporateLanding from "./PaidCorporateLanding";
 import courseData from "../corporate-training/course-data.json";
 import "./paid-corporate.css";
 
-const title="Customised Corporate Training in Dubai | Entrepôt Training Institute";
-const description="Customised corporate training designed around your organisation, people and business priorities. Explore 100+ ETI programmes across leadership, AI, HR, finance, supply chain, aviation and more.";
+const title="Customised Corporate Training for L&D Leaders | Entrepôt";
+const description="Turn capability priorities into practical corporate training shaped around your people, business context and rollout needs. Request a tailored recommendation from ETI.";
 
 export const metadata:Metadata={
   title,
