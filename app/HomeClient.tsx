@@ -24,6 +24,8 @@ const clientLogos = [
 const welcomeProgrammes = [
   {
     eyebrow: "Featured professional programme",
+    image: "/images/banner-effective-communication-storytelling.jpg",
+    imageAlt: "Executive professional presenting to senior colleagues in a boardroom",
     title: "Effective Communication and",
     accent: "Storytelling Skills",
     copy: "Communicate with clarity, shape memorable messages and present ideas with greater confidence and influence.",
@@ -34,6 +36,8 @@ const welcomeProgrammes = [
   },
   {
     eyebrow: "CAMS examination preparation",
+    image: "/images/banner-cams-exam-preparation.jpg",
+    imageAlt: "Compliance professional receiving guided CAMS examination preparation",
     title: "Join the Ultimate CAMS Exam",
     accent: "Preparation in Town!",
     copy: "Build examination confidence with expert preparation and full assistance throughout your CAMS exam registration journey.",
@@ -126,6 +130,9 @@ export default function Home() {
       {showWelcomeBanner && (
         <aside className="welcome-programme-banner" role="dialog" aria-modal="false" aria-labelledby="welcome-programme-title">
           <button type="button" className="welcome-banner-close" onClick={dismissWelcomeBanner} aria-label="Close programme announcement">×</button>
+          <div className="welcome-banner-image" key={`image-${welcomeSlide}`}>
+            <img src={welcomeProgrammes[welcomeSlide].image} alt={welcomeProgrammes[welcomeSlide].imageAlt}/>
+          </div>
           <div className="welcome-banner-content" key={welcomeSlide} aria-live="polite">
             <span>{welcomeProgrammes[welcomeSlide].eyebrow}</span>
             <h2 id="welcome-programme-title">{welcomeProgrammes[welcomeSlide].title} <em>{welcomeProgrammes[welcomeSlide].accent}</em></h2>
