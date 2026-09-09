@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.etiworld.ae"),
   title: "Entrepôt Training Institute | Gateway to Excellence",
   description: "Gateway to Excellence through job-ready aviation, logistics, supply chain and professional training.",
+  verification: {
+    google: "bEKv6y0kJYxJWORf0SBLTgow0CJk0BgwDaH57NI5GWY",
+  },
   other: {
     "codex-preview": "development",
   },
