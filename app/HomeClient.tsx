@@ -10,6 +10,15 @@ const programs = [
   { no: "03", slug: "business-entrepreneurship", title: "Business & Entrepreneurship", image:"/images/course-entrepreneurship.png", text: "Develop stronger commercial thinking, ownership and execution for people responsible for growth.", meta: "16 WEEKS · HYBRID" },
 ];
 
+const clientLogos = [
+  { name: "Yenepoya University", image: "/images/client-yenepoya-university.png" },
+  { name: "Philips Healthcare", image: "/images/client-philips-healthcare.png" },
+  { name: "Kenya Civil Aviation Authority", image: "/images/client-kenya-civil-aviation-authority.png" },
+  { name: "Water Engineers", image: "/images/client-water-engineers.png" },
+  { name: "Trip Planners", image: "/images/client-trip-planners.png" },
+  { name: "Skyline", image: "/images/client-skyline.png" },
+];
+
 const optimizedImage = (src: string, width = 900, quality = 76) => `/.netlify/images?url=${src}&w=${width}&q=${quality}`;
 
 export default function Home() {
@@ -105,6 +114,17 @@ export default function Home() {
               <div><strong>Adaptable</strong><span>To teams and locations</span></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="client-proof section-pad" aria-labelledby="client-proof-title">
+        <div className="client-proof-copy">
+          <div className="section-kicker">Selected organisations</div>
+          <h2 id="client-proof-title">Trusted in practice.<br/><em>Proven through delivery.</em></h2>
+          <p>ETI has successfully delivered professional learning for teams across respected organisations in education, healthcare, aviation, engineering and travel.</p>
+        </div>
+        <div className="client-logo-grid">
+          {clientLogos.map(client => <figure key={client.name}><img src={client.image} alt={client.name} loading="lazy" decoding="async"/><figcaption>{client.name}</figcaption></figure>)}
         </div>
       </section>
 
