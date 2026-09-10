@@ -36,6 +36,14 @@ const airComplaintsPhotos = [
   { image: "/images/training-air-complaints-cohort.jpeg", alt: "Overseas Air Transportation Complaints Handling cohort and programme facilitators" },
 ];
 
+const cffpBatchPhotos = [
+  { image: "/images/training-cffp-55-certificate-01.jpeg", alt: "CFFP Batch No. 55 graduate receiving her Certificate of Achievement" },
+  { image: "/images/training-cffp-55-presentation.jpeg", alt: "CFFP Batch No. 55 programme completion presentation" },
+  { image: "/images/training-cffp-55-certificate-02.jpeg", alt: "CFFP Batch No. 55 graduate presented with his Certificate of Achievement" },
+  { image: "/images/training-cffp-55-certificate-03.jpeg", alt: "Certified Freight Forwarding Professional graduate with her certificate" },
+  { image: "/images/training-cffp-55-completion.jpeg", alt: "CFFP Batch No. 55 learners and Entrepôt representatives celebrating completion" },
+];
+
 export default function TrainingGalleryPage() {
   return <main className="training-gallery-page">
     <SiteHeader/>
@@ -90,6 +98,25 @@ export default function TrainingGalleryPage() {
         {airComplaintsPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
           <img src={optimizedImage(photo.image, index === 0 || index === 5 ? 1200 : 720, 82)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
           <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "Celebrating achievement" : index === 5 ? "The overseas cohort" : index < 3 ? "Learning in action" : "Programme completion"}</figcaption>
+        </figure>)}
+      </div>
+    </section>
+
+    <section className="training-gallery-feature section-pad" aria-labelledby="cffp-gallery-title">
+      <div className="training-gallery-feature-head">
+        <div>
+          <span>Programme completion / Batch No. 55</span>
+          <h2 id="cffp-gallery-title">Certified Freight Forwarding<br/><em>Professional.</em></h2>
+        </div>
+        <div>
+          <strong>Successfully completed</strong>
+          <p>We are proud to have successfully completed Batch No. 55 of the Certified Freight Forwarding Professional (CFFP) programme.</p>
+        </div>
+      </div>
+      <div className="training-gallery-feature-grid training-gallery-cffp-grid">
+        {cffpBatchPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
+          <img src={optimizedImage(photo.image, index === 4 ? 1100 : 720, 84)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
+          <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 4 ? "Celebrating Batch No. 55" : "Certificate presentation"}</figcaption>
         </figure>)}
       </div>
     </section>
