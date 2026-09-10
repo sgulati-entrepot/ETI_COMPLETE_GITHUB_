@@ -27,6 +27,15 @@ const airTransportationPhotos = [
   { image: "/images/training-air-transportation-graduates-wide.jpeg", alt: "Overseas Air Transportation Handling batch with Entrepôt facilitators" },
 ];
 
+const airComplaintsPhotos = [
+  { image: "/images/training-air-complaints-graduates.jpeg", alt: "Air Transportation Complaints Handling graduates with facilitators and corporate representatives" },
+  { image: "/images/training-air-complaints-facilitation-01.jpeg", alt: "Entrepôt facilitator presenting during the Air Transportation Complaints Handling programme" },
+  { image: "/images/training-air-complaints-facilitation-02.jpeg", alt: "Facilitator leading an Air Transportation Complaints Handling learning session" },
+  { image: "/images/training-air-complaints-celebration.jpeg", alt: "Graduate and programme team celebrating successful course completion" },
+  { image: "/images/training-air-complaints-certificate.jpeg", alt: "Air Transportation Complaints Handling graduate receiving her completion certificate" },
+  { image: "/images/training-air-complaints-cohort.jpeg", alt: "Overseas Air Transportation Complaints Handling cohort and programme facilitators" },
+];
+
 export default function TrainingGalleryPage() {
   return <main className="training-gallery-page">
     <SiteHeader/>
@@ -62,6 +71,25 @@ export default function TrainingGalleryPage() {
         {airTransportationPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
           <img src={optimizedImage(photo.image, index === 0 || index === 5 ? 1200 : 720, 84)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
           <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "Celebrating achievement" : index === 5 ? "The overseas cohort" : "Certificate presentation"}</figcaption>
+        </figure>)}
+      </div>
+    </section>
+
+    <section className="training-gallery-feature training-gallery-feature-light section-pad" aria-labelledby="air-complaints-gallery-title">
+      <div className="training-gallery-feature-head">
+        <div>
+          <span>Programme completion / Overseas delivery</span>
+          <h2 id="air-complaints-gallery-title">Air Transportation<br/><em>Complaints Handling.</em></h2>
+        </div>
+        <div>
+          <strong>Successfully completed</strong>
+          <p>We are proud to have successfully completed an overseas batch of Air Transportation Complaints Handling for one of our esteemed corporate clients.</p>
+        </div>
+      </div>
+      <div className="training-gallery-feature-grid training-gallery-complaints-grid">
+        {airComplaintsPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
+          <img src={optimizedImage(photo.image, index === 0 || index === 5 ? 1200 : 720, 82)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
+          <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "Celebrating achievement" : index === 5 ? "The overseas cohort" : index < 3 ? "Learning in action" : "Programme completion"}</figcaption>
         </figure>)}
       </div>
     </section>
