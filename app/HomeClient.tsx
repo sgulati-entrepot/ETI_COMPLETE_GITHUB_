@@ -23,7 +23,7 @@ const clientLogos = [
 ];
 
 const galleryPreview = [
-  { title: "Leadership in action", image: "/images/course-leadership.png", alt: "Facilitator leading a professional leadership session" },
+  { title: "Overseas training completed", image: "/images/training-air-transportation-graduates.jpeg", alt: "Graduates and facilitators celebrating completion of Air Transportation Handling training" },
   { title: "Communication with impact", image: "/images/program-public-speaking.png", alt: "Professional presenting to an engaged audience" },
   { title: "Collaborative learning", image: "/images/course-entrepreneurship.png", alt: "Professionals collaborating during a practical workshop" },
   { title: "Specialist aviation skills", image: "/images/airport-ramp-services-hero.jpg", alt: "Airport ground operations and specialist aviation training environment" },

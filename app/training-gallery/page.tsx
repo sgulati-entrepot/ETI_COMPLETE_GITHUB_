@@ -18,6 +18,15 @@ const gallery = [
   { title: "Academic Partnerships", category: "Learning Community", image: "/images/award-yenepoya-partnership.jpg", alt: "Entrepôt representatives with academic partnership leaders", caption: "Professional relationships that widen access to meaningful learning." },
 ];
 
+const airTransportationPhotos = [
+  { image: "/images/training-air-transportation-graduates.jpeg", alt: "Graduates and facilitators celebrating completion of the Air Transportation Handling programme" },
+  { image: "/images/training-air-transportation-certificate-01.jpeg", alt: "Air Transportation Handling graduate receiving her completion certificate" },
+  { image: "/images/training-air-transportation-certificate-02.jpeg", alt: "Air Transportation Handling graduate presented with her certificate" },
+  { image: "/images/training-air-transportation-certificate-03.jpeg", alt: "Graduate celebrating successful Air Transportation Handling course completion" },
+  { image: "/images/training-air-transportation-certificate-04.jpeg", alt: "Air Transportation Handling graduate holding her completion certificate" },
+  { image: "/images/training-air-transportation-graduates-wide.jpeg", alt: "Overseas Air Transportation Handling batch with Entrepôt facilitators" },
+];
+
 export default function TrainingGalleryPage() {
   return <main className="training-gallery-page">
     <SiteHeader/>
@@ -35,6 +44,25 @@ export default function TrainingGalleryPage() {
       <div>
         <h2>Designed for participation.<br/><em>Built for application.</em></h2>
         <p>From executive development and communication to technology, aviation and business skills, each learning environment is designed to encourage confidence, participation and relevant workplace application.</p>
+      </div>
+    </section>
+
+    <section className="training-gallery-feature section-pad" aria-labelledby="air-transportation-gallery-title">
+      <div className="training-gallery-feature-head">
+        <div>
+          <span>Programme completion / Overseas delivery</span>
+          <h2 id="air-transportation-gallery-title">Air Transportation<br/><em>Handling.</em></h2>
+        </div>
+        <div>
+          <strong>Successfully completed</strong>
+          <p>We are proud to have successfully completed an overseas batch of Air Transportation Handling for one of our esteemed corporate clients.</p>
+        </div>
+      </div>
+      <div className="training-gallery-feature-grid">
+        {airTransportationPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
+          <img src={optimizedImage(photo.image, index === 0 || index === 5 ? 1200 : 720, 84)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
+          <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "Celebrating achievement" : index === 5 ? "The overseas cohort" : "Certificate presentation"}</figcaption>
+        </figure>)}
       </div>
     </section>
 
