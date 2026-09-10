@@ -37,6 +37,7 @@ const welcomeProgrammes = [
     title: "Effective Communication and",
     accent: "Storytelling Skills",
     copy: "Communicate with clarity, shape memorable messages and present ideas with greater confidence and influence.",
+    offer: "2 Days · AED 1,200 · First 5 September Enrolments · 2+1 Offer",
     primaryLabel: "Explore programme",
     primaryHref: "/corporate-training/courses/skills-development/storytelling-and-effective-presentation-skills",
     secondaryLabel: "Enquire now",
@@ -49,6 +50,7 @@ const welcomeProgrammes = [
     title: "Join the Ultimate CAMS Exam",
     accent: "Preparation in Town!",
     copy: "Build examination confidence with expert preparation and full assistance throughout your CAMS exam registration journey.",
+    offer: "Expert preparation · Full exam registration assistance",
     primaryLabel: "Explore CAMS",
     primaryHref: "/programs/certified-anti-money-laundering-specialist",
     secondaryLabel: "Get registration assistance",
@@ -79,7 +81,7 @@ export default function Home() {
   }, [menuOpen]);
 
   useEffect(() => {
-    if (window.sessionStorage.getItem("eti-featured-programmes-banner-v2")) return;
+    if (window.sessionStorage.getItem("eti-featured-programmes-banner-v3")) return;
     const timer = window.setTimeout(() => setShowWelcomeBanner(true), 1400);
     return () => window.clearTimeout(timer);
   }, []);
@@ -91,7 +93,7 @@ export default function Home() {
   }, [showWelcomeBanner]);
 
   function dismissWelcomeBanner() {
-    window.sessionStorage.setItem("eti-featured-programmes-banner-v2", "true");
+    window.sessionStorage.setItem("eti-featured-programmes-banner-v3", "true");
     setShowWelcomeBanner(false);
   }
 
@@ -144,6 +146,7 @@ export default function Home() {
             <span>{welcomeProgrammes[welcomeSlide].eyebrow}</span>
             <h2 id="welcome-programme-title">{welcomeProgrammes[welcomeSlide].title} <em>{welcomeProgrammes[welcomeSlide].accent}</em></h2>
             <p>{welcomeProgrammes[welcomeSlide].copy}</p>
+            <strong className="welcome-banner-offer">{welcomeProgrammes[welcomeSlide].offer}</strong>
             <div className="welcome-banner-actions">
               <a href={welcomeProgrammes[welcomeSlide].primaryHref} onClick={dismissWelcomeBanner}>{welcomeProgrammes[welcomeSlide].primaryLabel} <b>↗</b></a>
               <a href={welcomeProgrammes[welcomeSlide].secondaryHref} onClick={dismissWelcomeBanner}>{welcomeProgrammes[welcomeSlide].secondaryLabel} <b>→</b></a>
