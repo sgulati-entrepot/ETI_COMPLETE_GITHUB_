@@ -8,10 +8,6 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
-  { title: "Leadership in Action", category: "Leadership & Management", image: "/images/course-leadership.png", alt: "Facilitator leading a professional leadership session", caption: "Thoughtful facilitation that turns leadership ideas into practical judgement." },
-  { title: "Communication with Impact", category: "Professional Skills", image: "/images/program-public-speaking.png", alt: "Professional presenting to an engaged audience", caption: "Building the confidence to communicate clearly, influence and connect." },
-  { title: "Collaborative Learning", category: "Learning Experience", image: "/images/course-professional-excellence.png", alt: "Professionals participating in a collaborative learning session", caption: "Engaging learning designed around discussion, reflection and application." },
-  { title: "Corporate Capability", category: "Customised Training", image: "/images/corporate-training-hero.png", alt: "Facilitator working with a professional corporate team", caption: "Focused programmes shaped around the priorities of teams and organisations." },
   { title: "Business & Entrepreneurship", category: "Commercial Capability", image: "/images/course-entrepreneurship.png", alt: "Professionals collaborating during a practical business workshop", caption: "Collaborative environments where ideas become stronger commercial decisions." },
   { title: "AI & Digital Skills", category: "Future-Ready Learning", image: "/images/ai-generalist-hero-v2.jpg", alt: "Team learning practical artificial intelligence and digital skills", caption: "Practical digital capability for professionals navigating a changing workplace." },
   { title: "Aviation & Ground Operations", category: "Specialist Training", image: "/images/airport-ramp-services-hero.jpg", alt: "Airport ground operations and aviation training environment", caption: "Industry-relevant learning grounded in operational standards and safety." },
