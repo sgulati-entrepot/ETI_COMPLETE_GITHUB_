@@ -48,6 +48,15 @@ const airFacilitationPhotos = [
   { image: "/images/training-air-facilitation-completion.jpeg", alt: "Air Transportation Handling graduates celebrating programme completion" },
 ];
 
+const tarmacToAirPhotos = [
+  { image: "/images/training-tarmac-to-air-classroom.jpeg", alt: "Tarmac to Air learners participating in a practical aviation classroom session" },
+  { image: "/images/training-tarmac-to-air-facilitator-01.jpeg", alt: "Tarmac to Air facilitator presenting aviation, airport and travel pathways" },
+  { image: "/images/training-tarmac-to-air-facilitator-02.jpeg", alt: "Tarmac to Air facilitator engaging learners during the aviation programme" },
+  { image: "/images/training-tarmac-to-air-certificate-01.jpeg", alt: "Tarmac to Air learner receiving her Certificate of Participation" },
+  { image: "/images/training-tarmac-to-air-certificate-02.jpeg", alt: "Tarmac to Air learner presented with his Certificate of Participation" },
+  { image: "/images/training-tarmac-to-air-certificate-03.jpeg", alt: "Tarmac to Air learner celebrating successful programme completion" },
+];
+
 export default function TrainingGalleryPage() {
   return <main className="training-gallery-page">
     <SiteHeader/>
@@ -140,6 +149,25 @@ export default function TrainingGalleryPage() {
         {airFacilitationPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
           <img src={optimizedImage(photo.image, index === 0 || index === 3 ? 1200 : 760, 82)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
           <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "The overseas cohort" : index < 3 ? "Learning in action" : index < 5 ? "Collaborative learning" : "Programme completion"}</figcaption>
+        </figure>)}
+      </div>
+    </section>
+
+    <section className="training-gallery-feature section-pad" aria-labelledby="tarmac-to-air-gallery-title">
+      <div className="training-gallery-feature-head">
+        <div>
+          <span>Programme completion / Aviation learning</span>
+          <h2 id="tarmac-to-air-gallery-title">Tarmac<br/><em>to Air.</em></h2>
+        </div>
+        <div>
+          <strong>Successfully completed</strong>
+          <p>We are proud to have successfully completed a batch of the Tarmac to Air programme.</p>
+        </div>
+      </div>
+      <div className="training-gallery-feature-grid training-gallery-tarmac-grid">
+        {tarmacToAirPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
+          <img src={optimizedImage(photo.image, index === 0 ? 1200 : 760, 84)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
+          <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "Learning in action" : index < 3 ? "Expert facilitation" : "Certificate presentation"}</figcaption>
         </figure>)}
       </div>
     </section>
