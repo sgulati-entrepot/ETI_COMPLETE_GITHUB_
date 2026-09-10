@@ -44,6 +44,16 @@ const cffpBatchPhotos = [
   { image: "/images/training-cffp-55-completion.jpeg", alt: "CFFP Batch No. 55 learners and Entrepôt representatives celebrating completion" },
 ];
 
+const airFacilitationPhotos = [
+  { image: "/images/training-air-facilitation-cohort-outdoor.jpeg", alt: "Overseas Facilitation in Air Transportation Handling cohort with Entrepôt facilitators" },
+  { image: "/images/training-air-facilitation-session-01.jpeg", alt: "Facilitator teaching the key pillars of air transportation facilitation" },
+  { image: "/images/training-air-facilitation-session-02.jpeg", alt: "Interactive Air Transportation Handling facilitation session" },
+  { image: "/images/training-air-facilitation-cohort-indoor.jpeg", alt: "Air Transportation Handling learners and programme facilitators" },
+  { image: "/images/training-air-facilitation-group.jpeg", alt: "Programme participants celebrating the overseas learning experience" },
+  { image: "/images/training-air-facilitation-certificate.jpeg", alt: "Facilitation in Air Transportation Handling graduate receiving his certificate" },
+  { image: "/images/training-air-facilitation-completion.jpeg", alt: "Air Transportation Handling graduates celebrating programme completion" },
+];
+
 export default function TrainingGalleryPage() {
   return <main className="training-gallery-page">
     <SiteHeader/>
@@ -117,6 +127,25 @@ export default function TrainingGalleryPage() {
         {cffpBatchPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
           <img src={optimizedImage(photo.image, index === 4 ? 1100 : 720, 84)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
           <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 4 ? "Celebrating Batch No. 55" : "Certificate presentation"}</figcaption>
+        </figure>)}
+      </div>
+    </section>
+
+    <section className="training-gallery-feature training-gallery-feature-light section-pad" aria-labelledby="air-facilitation-gallery-title">
+      <div className="training-gallery-feature-head">
+        <div>
+          <span>Programme completion / Overseas delivery</span>
+          <h2 id="air-facilitation-gallery-title">Facilitation in Air<br/><em>Transportation Handling.</em></h2>
+        </div>
+        <div>
+          <strong>Successfully completed</strong>
+          <p>We are proud to have successfully completed an overseas batch of Facilitation in Air Transportation Handling for one of our esteemed corporate clients.</p>
+        </div>
+      </div>
+      <div className="training-gallery-feature-grid training-gallery-facilitation-grid">
+        {airFacilitationPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
+          <img src={optimizedImage(photo.image, index === 0 || index === 3 ? 1200 : 760, 82)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
+          <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "The overseas cohort" : index < 3 ? "Learning in action" : index < 5 ? "Collaborative learning" : "Programme completion"}</figcaption>
         </figure>)}
       </div>
     </section>
