@@ -23,10 +23,10 @@ const clientLogos = [
 ];
 
 const galleryPreview = [
-  { title: "Overseas training completed", image: "/images/training-air-transportation-graduates.jpeg", alt: "Graduates and facilitators celebrating completion of Air Transportation Handling training" },
-  { title: "Communication with impact", image: "/images/program-public-speaking.png", alt: "Professional presenting to an engaged audience" },
-  { title: "Collaborative learning", image: "/images/course-entrepreneurship.png", alt: "Professionals collaborating during a practical workshop" },
-  { title: "Specialist aviation skills", image: "/images/airport-ramp-services-hero.jpg", alt: "Airport ground operations and specialist aviation training environment" },
+  { title: "Air Transportation Handling", image: "/images/training-air-transportation-graduates.jpeg", alt: "Graduates and facilitators celebrating completion of Air Transportation Handling training" },
+  { title: "Air Transportation Complaints Handling", image: "/images/training-air-complaints-graduates.jpeg", alt: "Air Transportation Complaints Handling graduates with facilitators and corporate representatives" },
+  { title: "CFFP Batch No. 55", image: "/images/training-cffp-55-completion.jpeg", alt: "CFFP Batch No. 55 learners and Entrepôt representatives celebrating completion" },
+  { title: "Facilitation in Air Transportation Handling", image: "/images/training-air-facilitation-cohort-outdoor.jpeg", alt: "Overseas Facilitation in Air Transportation Handling cohort with Entrepôt facilitators" },
 ];
 
 const welcomeProgrammes = [
