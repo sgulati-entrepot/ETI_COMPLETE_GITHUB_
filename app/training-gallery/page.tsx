@@ -8,8 +8,6 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
-  { title: "Business & Entrepreneurship", category: "Commercial Capability", image: "/images/course-entrepreneurship.png", alt: "Professionals collaborating during a practical business workshop", caption: "Collaborative environments where ideas become stronger commercial decisions." },
-  { title: "AI & Digital Skills", category: "Future-Ready Learning", image: "/images/ai-generalist-hero-v2.jpg", alt: "Team learning practical artificial intelligence and digital skills", caption: "Practical digital capability for professionals navigating a changing workplace." },
   { title: "Aviation & Ground Operations", category: "Specialist Training", image: "/images/airport-ramp-services-hero.jpg", alt: "Airport ground operations and aviation training environment", caption: "Industry-relevant learning grounded in operational standards and safety." },
   { title: "Academic Partnerships", category: "Learning Community", image: "/images/award-yenepoya-partnership.jpg", alt: "Entrepôt representatives with academic partnership leaders", caption: "Professional relationships that widen access to meaningful learning." },
 ];
@@ -53,7 +51,7 @@ const airFacilitationPhotos = [
 export default function TrainingGalleryPage() {
   return <main className="training-gallery-page">
     <SiteHeader/>
-    <section className="training-gallery-hero" style={{ backgroundImage: `${optimizedBackground("/images/program-public-speaking.png", 1920, 80)}` }}>
+    <section className="training-gallery-hero" style={{ backgroundImage: `${optimizedBackground("/images/training-gallery-hero-v2.jpg", 1920, 82)}` }}>
       <div>
         <span>Training Gallery</span>
         <h1>Learning that feels<br/><em>alive.</em></h1>
