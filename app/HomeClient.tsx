@@ -22,6 +22,13 @@ const clientLogos = [
   { name: "Signify", image: "/images/client-signify.png" },
 ];
 
+const galleryPreview = [
+  { title: "Leadership in action", image: "/images/course-leadership.png", alt: "Facilitator leading a professional leadership session" },
+  { title: "Communication with impact", image: "/images/program-public-speaking.png", alt: "Professional presenting to an engaged audience" },
+  { title: "Collaborative learning", image: "/images/course-entrepreneurship.png", alt: "Professionals collaborating during a practical workshop" },
+  { title: "Specialist aviation skills", image: "/images/airport-ramp-services-hero.jpg", alt: "Airport ground operations and specialist aviation training environment" },
+];
+
 const welcomeProgrammes = [
   {
     eyebrow: "Featured professional programme",
@@ -119,6 +126,7 @@ export default function Home() {
           <ProgramMenu/>
           <CorporateMenu/>
           <InsightsMenu/>
+          <a href="/training-gallery" className="training-gallery-nav-link" onClick={() => setMenuOpen(false)}>Training Gallery</a>
           <a href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
           <a href="/student-registration" className="register-nav-link" onClick={() => setMenuOpen(false)}>Register Now</a>
           <div className="nav-socials"><InstagramLink/><LinkedInLink/><YouTubeLink/><FacebookLink/><WhatsAppLink/></div>
@@ -196,6 +204,28 @@ export default function Home() {
         </div>
         <div className="client-logo-grid">
           {clientLogos.map((client,index) => <figure key={client.name}><span>{String(index+1).padStart(2,"0")}</span><img src={optimizedImage(client.image, 420, 82)} alt={client.name} loading="lazy" decoding="async"/><figcaption>{client.name}</figcaption></figure>)}
+        </div>
+      </section>
+
+      <section className="home-gallery-preview section-pad" aria-labelledby="home-gallery-title">
+        <div className="home-gallery-heading">
+          <div>
+            <div className="section-kicker light">Learning in action</div>
+            <h2 id="home-gallery-title">Where knowledge becomes<br/><em>capability.</em></h2>
+          </div>
+          <div>
+            <p>A visual perspective on focused facilitation, collaborative learning and practical professional development.</p>
+            <a href="/training-gallery">Explore the training gallery <span>↗</span></a>
+          </div>
+        </div>
+        <div className="home-gallery-grid">
+          {galleryPreview.map((item, index) => (
+            <a href="/training-gallery" className={`home-gallery-card home-gallery-card-${index + 1}`} key={item.title} aria-label={`View ${item.title} in the training gallery`}>
+              <img src={optimizedImage(item.image, index === 0 ? 1200 : 760, 80)} alt={item.alt} loading="lazy" decoding="async"/>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{item.title}</strong>
+            </a>
+          ))}
         </div>
       </section>
 

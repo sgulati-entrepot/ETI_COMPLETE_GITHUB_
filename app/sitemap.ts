@@ -36,6 +36,7 @@ const staticPages = [
   "/students-club",
   "/terms-and-policies",
   "/testimonials",
+  "/training-gallery",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
