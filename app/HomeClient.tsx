@@ -83,7 +83,7 @@ export default function Home() {
 
   useEffect(() => {
     if (window.sessionStorage.getItem("eti-featured-programmes-banner-v3")) return;
-    const timer = window.setTimeout(() => setShowWelcomeBanner(true), 1400);
+    const timer = window.setTimeout(() => setShowWelcomeBanner(true), 0);
     return () => window.clearTimeout(timer);
   }, []);
 
