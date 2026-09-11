@@ -4,6 +4,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { AboutMenu, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 import { optimizedImage } from "./image";
+import TestimonialVideoGallery from "./TestimonialVideoGallery";
 
 const programs = [
   { no: "01", slug: "leadership-management", title: "Leadership & Management", image:"/images/course-leadership.png", text: "Strengthen the judgement, communication and people-leadership capabilities your organisation needs next.", meta: "12 WEEKS · HYBRID" },
@@ -347,6 +348,8 @@ export default function Home() {
           <a className="btn-gold" href="/testimonials">Explore Testimonials <span>↗</span></a>
         </div>
       </section>
+
+      <TestimonialVideoGallery context="home"/>
 
       <section id="contact" className="contact section-pad">
         <div className="contact-copy">

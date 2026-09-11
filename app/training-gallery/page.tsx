@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components";
 import { optimizedBackground, optimizedImage } from "../image";
+import TestimonialVideoGallery from "../TestimonialVideoGallery";
 
 export const metadata: Metadata = {
   title: "Training Gallery | Entrepôt Training Institute",
@@ -76,6 +77,8 @@ export default function TrainingGalleryPage() {
         <p>From executive development and communication to technology, aviation and business skills, each learning environment is designed to encourage confidence, participation and relevant workplace application.</p>
       </div>
     </section>
+
+    <TestimonialVideoGallery context="gallery"/>
 
     <section className="training-gallery-feature section-pad" aria-labelledby="air-transportation-gallery-title">
       <div className="training-gallery-feature-head">
