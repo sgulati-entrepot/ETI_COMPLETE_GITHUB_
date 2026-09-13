@@ -58,6 +58,11 @@ const tarmacToAirPhotos = [
   { image: "/images/training-tarmac-to-air-certificate-03.jpeg", alt: "Tarmac to Air learner celebrating successful programme completion" },
 ];
 
+const financialConsultantsAuditorsPhotos = [
+  { image: "/images/training-financial-consultants-auditors-01.jpeg", alt: "Financial consultants and auditors celebrating completion of their corporate training programme with certificates" },
+  { image: "/images/training-financial-consultants-auditors-02.jpeg", alt: "Corporate training cohort of financial consultants and auditors holding their certificates of achievement" },
+];
+
 export default function TrainingGalleryPage() {
   return <main className="training-gallery-page">
     <SiteHeader/>
@@ -171,6 +176,25 @@ export default function TrainingGalleryPage() {
         {tarmacToAirPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
           <img src={optimizedImage(photo.image, index === 0 ? 1200 : 760, 84)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} decoding="async"/>
           <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "Learning in action" : index < 3 ? "Expert facilitation" : "Certificate presentation"}</figcaption>
+        </figure>)}
+      </div>
+    </section>
+
+    <section className="training-gallery-feature training-gallery-feature-light section-pad" aria-labelledby="financial-consultants-auditors-gallery-title">
+      <div className="training-gallery-feature-head">
+        <div>
+          <span>Programme completion / Corporate learning</span>
+          <h2 id="financial-consultants-auditors-gallery-title">Financial Consultants<br/><em>&amp; Auditors.</em></h2>
+        </div>
+        <div>
+          <strong>Successfully completed</strong>
+          <p>We are proud to have successfully completed a corporate training batch for financial consultants and auditors from one of our esteemed corporate clients.</p>
+        </div>
+      </div>
+      <div className="training-gallery-feature-grid training-gallery-financial-grid">
+        {financialConsultantsAuditorsPhotos.map((photo, index) => <figure className={`training-gallery-feature-photo feature-photo-${index + 1}`} key={photo.image}>
+          <img src={optimizedImage(photo.image, 1200, 84)} alt={photo.alt} loading="lazy" decoding="async"/>
+          <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{index === 0 ? "Celebrating professional achievement" : "Corporate cohort completion"}</figcaption>
         </figure>)}
       </div>
     </section>
