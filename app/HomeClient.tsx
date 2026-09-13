@@ -30,6 +30,11 @@ const galleryPreview = [
   { title: "Facilitation in Air Transportation Handling", image: "/images/training-air-facilitation-cohort-outdoor.jpeg", alt: "Overseas Facilitation in Air Transportation Handling cohort with Entrepôt facilitators" },
 ];
 
+const financialConsultantsAuditorsHomePhotos = [
+  { image: "/images/training-financial-consultants-auditors-01.jpeg", alt: "Financial consultants and auditors celebrating completion of their corporate training programme with certificates" },
+  { image: "/images/training-financial-consultants-auditors-02.jpeg", alt: "Corporate training cohort of financial consultants and auditors holding their certificates of achievement" },
+];
+
 const welcomeProgrammes = [
   {
     eyebrow: "Featured professional programme",
@@ -229,6 +234,20 @@ export default function Home() {
             <a href="/training-gallery">Explore the training gallery <span>↗</span></a>
           </div>
         </div>
+        <article className="home-gallery-feature-story" aria-labelledby="home-financial-gallery-title">
+          <div className="home-gallery-feature-copy">
+            <span>Latest programme completion</span>
+            <h3 id="home-financial-gallery-title">Financial Consultants<br/><em>&amp; Auditors.</em></h3>
+            <strong>Successfully completed</strong>
+            <p>We are proud to have successfully completed a corporate training batch for financial consultants and auditors from one of our esteemed corporate clients.</p>
+          </div>
+          <div className="home-gallery-feature-images">
+            {financialConsultantsAuditorsHomePhotos.map((photo,index) => <a href="/training-gallery" key={photo.image} aria-label="View the Financial Consultants and Auditors completion story in the training gallery">
+              <img src={optimizedImage(photo.image, 1100, 84)} alt={photo.alt} loading="lazy" decoding="async"/>
+              <span>{String(index+1).padStart(2,"0")}</span>
+            </a>)}
+          </div>
+        </article>
         <div className="home-gallery-grid">
           {galleryPreview.map((item, index) => (
             <a href="/training-gallery" className={`home-gallery-card home-gallery-card-${index + 1}`} key={item.title} aria-label={`View ${item.title} in the training gallery`}>
