@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
 import { FormEvent, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { AboutMenu, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 import { optimizedImage } from "./image";
 import TestimonialVideoGallery from "./TestimonialVideoGallery";
@@ -65,6 +66,7 @@ const welcomeProgrammes = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -116,7 +118,7 @@ export default function Home() {
     try{
       const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});
       if(!response.ok)throw new Error("Submission failed");
-      form.reset();setProgram("");setSent(true);
+      form.reset();setProgram("");setSent(true);router.push("/thank-you");
     }catch{setFormError(true)}finally{setSending(false)}
   }
 

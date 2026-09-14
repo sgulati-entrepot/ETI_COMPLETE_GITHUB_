@@ -1,13 +1,15 @@
 "use client";
 import {FormEvent,useState} from "react";
+import {useRouter} from "next/navigation";
 
 export default function ContactLeadForm(){
+  const router=useRouter();
   const[status,setStatus]=useState<"idle"|"sending"|"sent"|"error">("idle");
   async function submit(event:FormEvent<HTMLFormElement>){
     event.preventDefault();setStatus("sending");
     const form=event.currentTarget;const data=new FormData(form);
     data.append("_subject","New lead from ETI Contact Us page");data.append("_template","table");data.append("_captcha","false");
-    try{const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});if(!response.ok)throw new Error("Submission failed");form.reset();setStatus("sent");}
+    try{const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});if(!response.ok)throw new Error("Submission failed");form.reset();setStatus("sent");router.push("/thank-you");}
     catch{setStatus("error")}
   }
   return <section id="lead-capture" className="contact-lead-section section-pad">

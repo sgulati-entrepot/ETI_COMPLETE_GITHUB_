@@ -1,10 +1,12 @@
 "use client";
 
 import {FormEvent,useRef,useState} from "react";
+import {useRouter} from "next/navigation";
 
 type Props={categories:string[]};
 
 export default function CorporateLeadForm({categories}:Props){
+  const router=useRouter();
   const[status,setStatus]=useState<"idle"|"sending"|"sent"|"error">("idle");
   const submissionInProgress=useRef(false);
 
@@ -25,7 +27,7 @@ export default function CorporateLeadForm({categories}:Props){
         value:1.0,
         currency:"AED"
       });
-      form.reset();setStatus("sent");
+      form.reset();setStatus("sent");router.push("/thank-you");
     }catch{submissionInProgress.current=false;setStatus("error")}
   }
 

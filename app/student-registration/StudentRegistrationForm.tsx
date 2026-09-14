@@ -1,9 +1,11 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 import { programGroups } from "../components";
 
 export default function StudentRegistrationForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -14,7 +16,7 @@ export default function StudentRegistrationForm() {
     try {
       const response = await fetch("https://formsubmit.co/ajax/courses@entrepot.ae", { method: "POST", headers: { Accept: "application/json" }, body: data });
       if (!response.ok) throw new Error("Submission failed");
-      form.reset(); setStatus("success"); window.scrollTo({ top: 0, behavior: "smooth" });
+      form.reset(); setStatus("success"); router.push("/thank-you");
     } catch { setStatus("error"); }
   }
 

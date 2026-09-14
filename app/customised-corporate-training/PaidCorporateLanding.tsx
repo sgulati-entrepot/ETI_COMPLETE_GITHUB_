@@ -2,6 +2,7 @@
 
 import {FormEvent,useMemo,useRef,useState} from "react";
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 import { optimizedImage } from "../image";
 import TestimonialVideoGallery from "../TestimonialVideoGallery";
 
@@ -107,12 +108,13 @@ function SocialIcon({name}:{name:string}){
 }
 
 function LeadForm({compact=false}:{compact?:boolean}){
+  const router=useRouter();
   const[status,setStatus]=useState<"idle"|"sending"|"sent"|"error">("idle");
   const busy=useRef(false);
   async function submit(event:FormEvent<HTMLFormElement>){
     event.preventDefault();if(busy.current)return;busy.current=true;setStatus("sending");
     const form=event.currentTarget;const data=new FormData(form);data.append("Lead source","Customised Corporate Training paid landing page");data.append("_subject",`Paid landing page corporate lead — ${data.get("Training category")||"General"}`);data.append("_template","table");data.append("_captcha","false");
-    try{const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});if(!response.ok)throw new Error();const gtag=(window as typeof window&{gtag?:(a:string,b:string,c:Record<string,string|number>)=>void}).gtag;if(gtag)gtag("event","conversion",{send_to:"AW-18398125830/CaK1CIvS9-YcEIa-9MRE",value:1,currency:"AED"});form.reset();setStatus("sent")}catch{busy.current=false;setStatus("error")}
+    try{const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});if(!response.ok)throw new Error();const gtag=(window as typeof window&{gtag?:(a:string,b:string,c:Record<string,string|number>)=>void}).gtag;if(gtag)gtag("event","conversion",{send_to:"AW-18398125830/CaK1CIvS9-YcEIa-9MRE",value:1,currency:"AED"});form.reset();setStatus("sent");router.push("/thank-you")}catch{busy.current=false;setStatus("error")}
   }
   if(status==="sent")return <div className="pct-form-success" role="status"><span>Thank you</span><h3>Your training brief is with us.</h3><p>Our corporate learning team will review your requirements and contact you to discuss the right next step.</p></div>;
   return <form className={`pct-lead-form ${compact?"pct-lead-form-compact":""}`} onSubmit={submit}>
