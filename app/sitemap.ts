@@ -23,6 +23,7 @@ const staticPages = [
   "/contact",
   "/corporate-training",
   "/customised-corporate-training",
+  "/customised-corporate-trainings-programmes",
   "/programs",
   "/programs/business-entrepreneurship",
   "/programs/certified-international-supply-manager",
