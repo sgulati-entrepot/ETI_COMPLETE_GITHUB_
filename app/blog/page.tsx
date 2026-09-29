@@ -3,6 +3,8 @@ import {SiteFooter,SiteHeader} from "../components";
 import { optimizedImage } from "../image";
 
 const articles=[
+  {category:"Corporate Learning",title:"How to Choose the Right Corporate Training Institute",excerpt:"A practical guide to selecting a training partner that starts with business needs, skills gaps and workplace application.",image:"/images/corporate-training-hero.png",read:"6 min read",href:"/blog/choose-right-corporate-training-institute"},
+  {category:"Workforce Development",title:"From Skills Gaps to Business Impact",excerpt:"A structured pathway for turning training needs analysis, practical learning and reinforcement into meaningful workforce capability.",image:"/images/home-learning-hero.png",read:"5 min read",href:"/blog/workforce-development-business-impact"},
   {category:"Corporate Learning",title:"Customized Training Programs: Turning Workforce Skills Gaps Into Business Results",excerpt:"A five-step framework for connecting workforce capability, practical learning and measurable business performance.",image:"/images/customized-training-programs-hero.jpg",read:"9 min read",href:"/blog/customized-training-programs"},
   {category:"Leadership",title:"Transformational Leaders",excerpt:"The clarity, communication, capability and accountability that will define high-performing professionals from 2026 to 2030.",image:"/images/course-leadership.png",read:"7 min read",href:"/blog/transformational-leaders"},
   {category:"Leadership & EI",title:"EI vs AI: Why Emotional Intelligence Still Wins in Leadership",excerpt:"Why emotionally intelligent leaders remain the human advantage behind high-performing organisations.",image:"/images/corporate-training-hero.png",read:"6 min read",href:"/blog/emotional-intelligence-vs-ai"},
