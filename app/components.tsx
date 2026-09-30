@@ -77,27 +77,26 @@ export function EnquiryLeadButton({programme="General programme enquiry",label="
   return <>
     <button type="button" className={`${className} enquiry-lead-button`} onClick={()=>{setStatus("idle");setOpen(true)}}>{label} <span>↗</span></button>
     {open&&<div className="lead-modal" role="presentation" onMouseDown={event=>{if(event.target===event.currentTarget)setOpen(false)}}>
-      <section className="lead-dialog enquiry-dialog corporate-enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="enquiry-lead-title">
+      <section className="lead-dialog enquiry-dialog programme-enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="enquiry-lead-title">
         <button type="button" className="lead-close" onClick={()=>setOpen(false)} aria-label="Close enquiry form">×</button>
         <div className="lead-dialog-intro">
-          <span>Corporate training enquiry</span>
-          <h2 id="enquiry-lead-title">Tell us what capability your team needs next.</h2>
-          <p>Select a training category and share your organisation&apos;s requirements. Our corporate learning team will recommend a focused course or shape a customised programme.</p>
-          <div className="enquiry-dialog-benefits"><strong>Category-led guidance</strong><small>Route your enquiry to the most relevant training specialist.</small><strong>Designed around your business</strong><small>Align content, delivery and outcomes with your team and industry.</small></div>
+          <span>Programme enquiry</span>
+          <h2 id="enquiry-lead-title">Tell us where you want to go next.</h2>
+          <p>Share your interests and our learning consultant will recommend the right programme, delivery format and next available cohort.</p>
+          <div className="enquiry-dialog-benefits"><strong>Quick response</strong><small>Our programme team will contact you shortly.</small><strong>Personal guidance</strong><small>Receive recommendations aligned with your career goals.</small></div>
         </div>
-        {status==="sent"?<div className="enquiry-success" role="status"><span>Thank you</span><h3>Your enquiry has been received.</h3><p>Our corporate learning team will contact you shortly.</p><button className="btn-gold" type="button" onClick={()=>setOpen(false)}>Close <span>✓</span></button></div>:
-        <form name="eti-leads-courses" method="POST" data-netlify="true" className="lead-form corporate-enquiry-form" onSubmit={submit}>
+        {status==="sent"?<div className="enquiry-success" role="status"><span>Thank you</span><h3>Your enquiry has been received.</h3><p>Our programme team will contact you shortly.</p><button className="btn-gold" type="button" onClick={()=>setOpen(false)}>Close <span>✓</span></button></div>:
+        <form name="eti-leads-courses" method="POST" data-netlify="true" className="lead-form programme-enquiry-form" onSubmit={submit}>
           <input type="hidden" name="form-name" value="eti-leads-courses"/>
           <input type="hidden" name="Programme" value={programme}/>
-          <div className="lead-form-row"><label>Full name *<input name="Name" type="text" autoComplete="name" required placeholder="Your full name"/></label><label>Organisation *<input name="Organisation" type="text" autoComplete="organization" required placeholder="Company or organisation"/></label></div>
-          <div className="lead-form-row"><label>Business email *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>
-          <label>Training category *<select name="Training category" defaultValue="" required><option value="" disabled>Select a category</option>{corporateCourses.map(group=><option value={group.category} key={group.no}>{group.category}</option>)}</select></label>
-          <label>Course or capability required *<AllCoursesSelect name="Course or capability" required defaultValue={programme==="General programme enquiry"?"":programme}/></label>
-          <div className="lead-form-row"><label>Approximate group size<select name="Group size" defaultValue=""><option value="" disabled>Select group size</option><option>1-10 participants</option><option>11-25 participants</option><option>26-50 participants</option><option>51-100 participants</option><option>More than 100 participants</option></select></label><label>Preferred delivery<select name="Preferred delivery" defaultValue=""><option value="" disabled>Select delivery mode</option><option>In-person at our organisation</option><option>Classroom at ETI</option><option>Live online instructor-led</option><option>Hybrid</option><option>Not sure yet</option></select></label></div>
-          <label>Training requirements<textarea name="Message" rows={3} placeholder="Tell us about your audience, objectives, preferred dates or customisation needs"/></label>
-          <label className="lead-consent"><input name="Consent" type="checkbox" value="Yes" required/><span>I agree to be contacted by Entrepôt Training Institute regarding this corporate training enquiry.</span></label>
+          <div className="lead-form-row"><label>Full name *<input name="Name" type="text" autoComplete="name" required placeholder="Your full name"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>
+          <div className="lead-form-row"><label>Email address *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Current location<select name="Location" defaultValue=""><option value="" disabled>Select location</option><option>United Arab Emirates</option><option>India</option><option>Other</option></select></label></div>
+          <label>Programme or training interest *<AllCoursesSelect name="Programme interest" required defaultValue={programme==="General programme enquiry"?"":programme}/></label>
+          <div className="lead-form-row"><label>Preferred learning mode<select name="Learning mode" defaultValue=""><option value="" disabled>Select mode</option><option>Classroom</option><option>Virtual instructor-led</option><option>Corporate / In-house</option><option>Not sure yet</option></select></label><label>Best time to contact<select name="Best contact time" defaultValue=""><option value="" disabled>Select time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label></div>
+          <label>How can we help?<textarea name="Message" rows={3} placeholder="Tell us briefly about your goals or training requirements"/></label>
+          <label className="lead-consent"><input name="Consent" type="checkbox" value="Yes" required/><span>I agree to be contacted by Entrepôt Training Institute regarding this enquiry.</span></label>
           {status==="error"&&<p className="lead-error" role="alert">We couldn&apos;t submit your enquiry. Please check your connection and try again.</p>}
-          <button className="btn-gold lead-submit" type="submit" disabled={status==="sending"}>{status==="sending"?"Sending…":"Submit corporate enquiry"}<span>↗</span></button>
+          <button className="btn-gold lead-submit" type="submit" disabled={status==="sending"}>{status==="sending"?"Sending…":"Submit enquiry"}<span>↗</span></button>
           <small>Your details are sent securely to courses@entrepot.ae and used only to respond to your enquiry.</small>
         </form>}
       </section>
