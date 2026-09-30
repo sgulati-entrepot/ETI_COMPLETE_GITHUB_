@@ -1,6 +1,7 @@
 "use client";
 import {FormEvent,useState} from "react";
 import {useRouter} from "next/navigation";
+import {AllCoursesSelect} from "../components";
 import {submitLead} from "../lib/submitLead";
 
 export default function ContactLeadForm(){
@@ -26,7 +27,7 @@ export default function ContactLeadForm(){
       <input type="hidden" name="form-name" value="eti-leads-courses"/>
       <div className="contact-lead-row"><label>Full name *<input name="Name" type="text" autoComplete="name" required placeholder="Your full name"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>
       <div className="contact-lead-row"><label>Email address *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Current location<select name="Location" defaultValue=""><option value="" disabled>Select location</option><option>United Arab Emirates</option><option>India</option><option>Other</option></select></label></div>
-      <label>Programme or training interest *<input name="Programme interest" type="text" required placeholder="Course, certification or corporate training"/></label>
+      <label>Programme or training interest *<AllCoursesSelect name="Programme interest" required/></label>
       <div className="contact-lead-row"><label>Preferred learning mode<select name="Learning mode" defaultValue=""><option value="" disabled>Select mode</option><option>Classroom</option><option>Virtual instructor-led</option><option>Corporate / In-house</option><option>Not sure yet</option></select></label><label>Best time to contact<select name="Best contact time" defaultValue=""><option value="" disabled>Select time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label></div>
       <label>How can we help?<textarea name="Message" rows={4} placeholder="Tell us briefly about your goals or training requirements"/></label>
       <label className="contact-lead-consent"><input name="Consent" type="checkbox" value="Yes" required/><span>I agree to be contacted by Entrepôt Training Institute regarding this enquiry.</span></label>

@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-import { programGroups } from "../components";
+import { AllCoursesSelect } from "../components";
 import { submitLead } from "../lib/submitLead";
 
 export default function StudentRegistrationForm() {
@@ -33,7 +33,7 @@ export default function StudentRegistrationForm() {
       <label>Country of residence<input name="Country" type="text" autoComplete="country-name" required placeholder="Where do you live?" /></label>
     </div></fieldset>
     <fieldset><legend><span>02</span><div>Your programme<small>Help us guide your next step.</small></div></legend><div className="registration-grid">
-      <label className="wide">Programme<select name="Programme" required defaultValue=""><option value="" disabled>Select a programme</option>{programGroups.map(group => <optgroup key={group.slug} label={group.name}>{group.courses.map(([programme]) => <option key={programme} value={programme}>{programme}</option>)}</optgroup>)}<optgroup label="Other training requirements"><option>Corporate Training Programme</option><option>Other / Not sure yet</option></optgroup></select></label>
+      <label className="wide">Programme<AllCoursesSelect name="Programme" required placeholder="Select a programme"/></label>
       <label>Preferred learning mode<select name="Preferred learning mode" required defaultValue=""><option value="" disabled>Select</option><option>Classroom</option><option>Live virtual</option><option>Hybrid</option><option>Flexible / advise me</option></select></label>
       <label>Preferred start date<input name="Preferred start date" type="date" /></label>
       <label>Highest qualification<input name="Highest qualification" type="text" placeholder="Degree, diploma or certification" /></label>

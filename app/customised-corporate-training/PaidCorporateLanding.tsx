@@ -3,6 +3,7 @@
 import {FormEvent,useMemo,useRef,useState} from "react";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
+import {AllCoursesSelect} from "../components";
 import { optimizedImage } from "../image";
 import TestimonialVideoGallery from "../TestimonialVideoGallery";
 import {submitLead} from "../lib/submitLead";
@@ -124,6 +125,7 @@ function LeadForm({compact=false}:{compact?:boolean}){
     <div className="pct-field-row"><label>Full name *<input name="Name" autoComplete="name" required placeholder="Your full name"/></label><label>Organisation *<input name="Organisation" autoComplete="organization" required placeholder="Company name"/></label></div>
     <div className="pct-field-row"><label>Business email *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>
     <label>Priority training area *<select name="Training category" required defaultValue=""><option value="" disabled>Select a training area</option>{categories.slice(1).map(x=><option key={x}>{x}</option>)}</select></label>
+    <label>Course or programme *<AllCoursesSelect name="Course or capability" required/></label>
     {!compact&&<label>What should this training help your people achieve?<textarea name="Requirements" rows={3} placeholder="Audience, capability gap, business objective, preferred dates or delivery format"/></label>}
     <label className="pct-consent"><input name="Consent" type="checkbox" required value="Yes"/><span>I agree to be contacted about this corporate training enquiry.</span></label>
     {status==="error"&&<p className="pct-error" role="alert">We couldn&apos;t submit this enquiry. Please try again or contact us directly.</p>}

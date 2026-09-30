@@ -3,7 +3,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { AboutMenu, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
+import { AboutMenu, AllCoursesSelect, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 import { optimizedImage } from "./image";
 import TestimonialVideoGallery from "./TestimonialVideoGallery";
 import { submitLead } from "./lib/submitLead";
@@ -388,9 +388,7 @@ export default function Home() {
             <label>Work email<input required type="email" name="email" autoComplete="email" placeholder="you@company.com" /></label>
             <label>Organisation<input required name="organisation" autoComplete="organization" placeholder="Company name" /></label>
             <label>Priority learning area
-              <select required name="interest" value={program} onChange={(e) => setProgram(e.target.value)}>
-                <option value="">Select a priority area</option><option>Customised corporate training</option>{programs.map(p => <option key={p.no}>{p.title}</option>)}<option>Other / Not sure yet</option>
-              </select>
+              <AllCoursesSelect required name="interest" value={program} onChange={(e) => setProgram(e.target.value)} placeholder="Select a course"/>
             </label>
             <label>What should this training help your people achieve?<textarea name="message" placeholder="Audience, capability gap, business objective or preferred delivery format" rows={3}/></label>
             {formError&&<p className="form-error" role="alert">We couldn&apos;t send your enquiry. Please email courses@entrepot.ae directly.</p>}
