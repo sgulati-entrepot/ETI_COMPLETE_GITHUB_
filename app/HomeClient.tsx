@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { AboutMenu, CorporateMenu, EnquiryLeadButton, FacebookLink, InstagramLink, InsightsMenu, LinkedInLink, ProgramMenu, SiteFooter, WhatsAppLink, YouTubeLink } from "./components";
 import { optimizedImage } from "./image";
 import TestimonialVideoGallery from "./TestimonialVideoGallery";
+import { submitLead } from "./lib/submitLead";
 
 const programs = [
   { no: "01", slug: "leadership-management", title: "Leadership & Management", image:"/images/course-leadership.png", text: "Strengthen the judgement, communication and people-leadership capabilities your organisation needs next.", meta: "12 WEEKS · HYBRID" },
@@ -116,8 +117,7 @@ export default function Home() {
     data.append("_template","table");
     data.append("_captcha","false");
     try{
-      const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});
-      if(!response.ok)throw new Error("Submission failed");
+      await submitLead(data);
       form.reset();setProgram("");setSent(true);router.push("/thank-you");
     }catch{setFormError(true)}finally{setSending(false)}
   }
@@ -382,7 +382,8 @@ export default function Home() {
         {sent ? (
           <div className="success"><span>✓</span><h3>Your training brief is with us.</h3><p>Our corporate learning team will review your requirements and contact you to discuss the right next step.</p><button onClick={() => setSent(false)}>Send another enquiry</button></div>
         ) : (
-          <form onSubmit={submit}>
+          <form name="eti-leads-courses" method="POST" data-netlify="true" onSubmit={submit}>
+            <input type="hidden" name="form-name" value="eti-leads-courses"/>
             <label>Full name<input required name="name" autoComplete="name" placeholder="Your name" /></label>
             <label>Work email<input required type="email" name="email" autoComplete="email" placeholder="you@company.com" /></label>
             <label>Organisation<input required name="organisation" autoComplete="organization" placeholder="Company name" /></label>

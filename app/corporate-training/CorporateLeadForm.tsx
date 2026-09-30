@@ -2,6 +2,7 @@
 
 import {FormEvent,useRef,useState} from "react";
 import {useRouter} from "next/navigation";
+import {submitLead} from "../lib/submitLead";
 
 type Props={categories:string[]};
 
@@ -19,8 +20,7 @@ export default function CorporateLeadForm({categories}:Props){
     data.append("_subject",`New corporate training lead - ${data.get("Training category")||"General enquiry"}`);
     data.append("_template","table");data.append("_captcha","false");
     try{
-      const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});
-      if(!response.ok)throw new Error("Submission failed");
+      await submitLead(data);
       const gtag=(window as typeof window&{gtag?:(command:string,eventName:string,parameters:{send_to:string;value:number;currency:string})=>void}).gtag;
       if(typeof gtag==="function")gtag("event","conversion",{
         send_to:"AW-18398125830/CaK1CIvS9-YcEIa-9MRE",
@@ -40,7 +40,8 @@ export default function CorporateLeadForm({categories}:Props){
       <div><strong>Designed around your business</strong><small>Align content, delivery and outcomes with your team and industry.</small></div>
     </div>
     {status==="sent"?<div className="contact-lead-success" role="status"><span>Thank you</span><h3>Your corporate training enquiry has been received.</h3><p>Our corporate learning team will contact you shortly.</p><button className="btn-gold" type="button" onClick={()=>{submissionInProgress.current=false;setStatus("idle")}}>Send another enquiry <b>↗</b></button></div>:
-    <form className="contact-lead-form" onSubmit={submit}>
+    <form name="eti-leads-courses" method="POST" data-netlify="true" className="contact-lead-form" onSubmit={submit}>
+      <input type="hidden" name="form-name" value="eti-leads-courses"/>
       <div className="contact-lead-row"><label>Full name *<input name="Name" type="text" autoComplete="name" required placeholder="Your full name"/></label><label>Organisation *<input name="Organisation" type="text" autoComplete="organization" required placeholder="Company or organisation"/></label></div>
       <div className="contact-lead-row"><label>Business email *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>
       <label>Training category *<select name="Training category" defaultValue="" required><option value="" disabled>Select a category</option>{categories.map(category=><option value={category} key={category}>{category}</option>)}</select></label>

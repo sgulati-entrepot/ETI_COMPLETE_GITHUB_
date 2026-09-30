@@ -5,6 +5,7 @@ import Link from "next/link";
 import {useRouter} from "next/navigation";
 import {optimizedImage} from "../image";
 import TestimonialVideoGallery from "../TestimonialVideoGallery";
+import {submitLead} from "../lib/submitLead";
 
 type ComplianceCourse={title:string;url:string;group:string};
 
@@ -127,10 +128,11 @@ function LeadForm({compact=false}:{compact?:boolean}){
   async function submit(event:FormEvent<HTMLFormElement>){
     event.preventDefault();if(busy.current)return;busy.current=true;setStatus("sending");
     const form=event.currentTarget;const data=new FormData(form);data.append("Lead source","Customised Corporate AML & Compliance Training Programmes page");data.append("_subject",`Corporate AML and compliance training lead — ${data.get("Course")||"General"}`);data.append("_template","table");data.append("_captcha","false");
-    try{const response=await fetch("https://formsubmit.co/ajax/programs@entrepot.in",{method:"POST",headers:{Accept:"application/json"},body:data});if(!response.ok)throw new Error();const gtag=(window as typeof window&{gtag?:(a:string,b:string,c:Record<string,string|number>)=>void}).gtag;if(gtag)gtag("event","conversion",{send_to:"AW-18398125830/CaK1CIvS9-YcEIa-9MRE",value:1,currency:"AED"});form.reset();setStatus("sent");router.push("/thank-you")}catch{busy.current=false;setStatus("error")}
+    try{await submitLead(data,"programs");const gtag=(window as typeof window&{gtag?:(a:string,b:string,c:Record<string,string|number>)=>void}).gtag;if(gtag)gtag("event","conversion",{send_to:"AW-18398125830/CaK1CIvS9-YcEIa-9MRE",value:1,currency:"AED"});form.reset();setStatus("sent");router.push("/thank-you")}catch{busy.current=false;setStatus("error")}
   }
   if(status==="sent")return <div className="pct-form-success" role="status"><span>Thank you</span><h3>Your compliance training brief is with us.</h3><p>Our corporate learning team will review your requirements and contact you to discuss the right next step.</p></div>;
-  return <form className={`pct-lead-form ${compact?"pct-lead-form-compact":""}`} onSubmit={submit}>
+  return <form name="eti-leads-programs" method="POST" data-netlify="true" className={`pct-lead-form ${compact?"pct-lead-form-compact":""}`} onSubmit={submit}>
+    <input type="hidden" name="form-name" value="eti-leads-programs"/>
     <div className="pct-form-heading"><span>Plan your compliance training</span><h2>{compact?"Get a tailored recommendation.":"Brief us on your compliance priorities."}</h2><p>Share your requirement and an ETI corporate learning specialist will help identify the relevant programme, delivery format and next step.</p></div>
     <div className="pct-field-row"><label>Full name *<input name="Name" autoComplete="name" required placeholder="Your full name"/></label><label>Organisation *<input name="Organisation" autoComplete="organization" required placeholder="Company name"/></label></div>
     <div className="pct-field-row"><label>Business email *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>

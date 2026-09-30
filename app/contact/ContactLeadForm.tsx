@@ -1,6 +1,7 @@
 "use client";
 import {FormEvent,useState} from "react";
 import {useRouter} from "next/navigation";
+import {submitLead} from "../lib/submitLead";
 
 export default function ContactLeadForm(){
   const router=useRouter();
@@ -9,7 +10,7 @@ export default function ContactLeadForm(){
     event.preventDefault();setStatus("sending");
     const form=event.currentTarget;const data=new FormData(form);
     data.append("_subject","New lead from ETI Contact Us page");data.append("_template","table");data.append("_captcha","false");
-    try{const response=await fetch("https://formsubmit.co/ajax/courses@entrepot.ae",{method:"POST",headers:{Accept:"application/json"},body:data});if(!response.ok)throw new Error("Submission failed");form.reset();setStatus("sent");router.push("/thank-you");}
+    try{await submitLead(data);form.reset();setStatus("sent");router.push("/thank-you");}
     catch{setStatus("error")}
   }
   return <section id="lead-capture" className="contact-lead-section section-pad">
@@ -21,7 +22,8 @@ export default function ContactLeadForm(){
       <div><strong>Personal guidance</strong><small>Receive recommendations aligned with your career goals.</small></div>
     </div>
     {status==="sent"?<div className="contact-lead-success" role="status"><span>Thank you</span><h3>Your enquiry has been received.</h3><p>Our learning consultant will contact you shortly.</p><button className="btn-gold" type="button" onClick={()=>setStatus("idle")}>Send another enquiry <b>↗</b></button></div>:
-    <form className="contact-lead-form" onSubmit={submit}>
+    <form name="eti-leads-courses" method="POST" data-netlify="true" className="contact-lead-form" onSubmit={submit}>
+      <input type="hidden" name="form-name" value="eti-leads-courses"/>
       <div className="contact-lead-row"><label>Full name *<input name="Name" type="text" autoComplete="name" required placeholder="Your full name"/></label><label>Phone number *<input name="Phone" type="tel" autoComplete="tel" required placeholder="+971"/></label></div>
       <div className="contact-lead-row"><label>Email address *<input name="Email" type="email" autoComplete="email" required placeholder="you@company.com"/></label><label>Current location<select name="Location" defaultValue=""><option value="" disabled>Select location</option><option>United Arab Emirates</option><option>India</option><option>Other</option></select></label></div>
       <label>Programme or training interest *<input name="Programme interest" type="text" required placeholder="Course, certification or corporate training"/></label>

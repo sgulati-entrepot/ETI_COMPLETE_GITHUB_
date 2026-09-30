@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { programGroups } from "../components";
+import { submitLead } from "../lib/submitLead";
 
 export default function StudentRegistrationForm() {
   const router = useRouter();
@@ -14,15 +15,15 @@ export default function StudentRegistrationForm() {
     data.append("_subject", "New student registration — Entrepôt Training Institute");
     data.append("_template", "table"); data.append("_captcha", "false");
     try {
-      const response = await fetch("https://formsubmit.co/ajax/courses@entrepot.ae", { method: "POST", headers: { Accept: "application/json" }, body: data });
-      if (!response.ok) throw new Error("Submission failed");
+      await submitLead(data);
       form.reset(); setStatus("success"); router.push("/thank-you");
     } catch { setStatus("error"); }
   }
 
   if (status === "success") return <section className="registration-success" role="status"><span>Registration received</span><h2>Thank you for taking the next step.</h2><p>Your details have been sent to the Entrepôt admissions team. A Learning &amp; Career Consultant will contact you shortly.</p><button type="button" className="btn-gold" onClick={() => setStatus("idle")}>Submit another registration <b>↗</b></button></section>;
 
-  return <form className="student-form" onSubmit={submit}>
+  return <form name="eti-leads-courses" method="POST" data-netlify="true" className="student-form" onSubmit={submit}>
+    <input type="hidden" name="form-name" value="eti-leads-courses"/>
     <input type="hidden" name="Form" value="Student Registration" />
     <fieldset><legend><span>01</span><div>Your details<small>Essential contact information.</small></div></legend><div className="registration-grid">
       <label className="wide">Full name<input name="Full name" type="text" autoComplete="name" required placeholder="Enter your full name" /></label>
