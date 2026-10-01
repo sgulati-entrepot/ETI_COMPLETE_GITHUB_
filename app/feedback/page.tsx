@@ -22,13 +22,14 @@ export default function FeedbackPage() {
       <a href="#feedback-form">Share your experience <span aria-hidden="true">↓</span></a>
       </div>
       <figure className={styles.heroVisual}>
-        <img src="/images/feedback-reflection.jpg" width="1536" height="1024" alt="An ivory learning journal and brass pen on a walnut desk, surrounded by soft light and lush greenery" fetchPriority="high" />
+        <img src="/images/feedback-conversation.jpg" width="1024" height="1536" alt="Two professionals sharing a thoughtful conversation in an elegant, greenery-filled lounge" fetchPriority="high" />
         <figcaption><span>Reflect. Share. Inspire.</span><p>Every experience.<br /><em>A chance to grow.</em></p></figcaption>
       </figure>
     </header>
     <div className={styles.editorialNote}><span>01 / Your perspective</span><p>Thoughtful feedback.<br /><em>Meaningful progress.</em></p><span>Shaping better learning, together.</span></div>
     <FeedbackForm />
     <section className={styles.closingPhoto} aria-label="Professional learning">
+      <img src="/images/feedback-learning-lounge.jpg" width="1536" height="864" alt="An elegant executive learning lounge with ivory seating, brass accents and lush indoor trees" loading="lazy" decoding="async" />
       <div><span>Entrepôt Training Institute</span><h2>Better learning begins<br />with <em>your voice.</em></h2><a href="#feedback-form">Share your experience <span aria-hidden="true">↑</span></a></div>
     </section>
     <SiteFooter />
