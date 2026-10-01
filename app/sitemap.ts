@@ -23,6 +23,7 @@ const staticPages = [
   "/blog/workforce-development-business-impact",
   "/careers",
   "/contact",
+  "/feedback",
   "/corporate-training",
   "/customised-corporate-training",
   "/customised-corporate-trainings-programmes",
