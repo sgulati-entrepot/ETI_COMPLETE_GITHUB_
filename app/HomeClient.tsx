@@ -386,6 +386,7 @@ export default function Home() {
             <input type="hidden" name="form-name" value="eti-leads-courses"/>
             <label>Full name<input required name="name" autoComplete="name" placeholder="Your name" /></label>
             <label>Work email<input required type="email" name="email" autoComplete="email" placeholder="you@company.com" /></label>
+            <label>Phone number<input required type="tel" name="Phone" autoComplete="tel" placeholder="Include country code, e.g. +971" /></label>
             <label>Organisation<input required name="organisation" autoComplete="organization" placeholder="Company name" /></label>
             <label>Priority learning area
               <AllCoursesSelect required name="interest" value={program} onChange={(e) => setProgram(e.target.value)} placeholder="Select a course"/>
