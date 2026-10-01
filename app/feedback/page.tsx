@@ -20,7 +20,18 @@ export default function FeedbackPage() {
       <p>Your feedback helps us understand what worked well, identify opportunities for improvement, and continuously enhance our training programmes, trainers, learning materials and overall participant experience.</p>
       <a href="#feedback-form">Share your experience <span aria-hidden="true">↓</span></a>
     </header>
+    <section className={styles.photoStory} aria-label="Learning through connection">
+      <figure className={styles.featurePhoto}>
+        <img src="/images/home-learning-hero.png" width="1672" height="941" alt="Professionals sharing ideas around a table in an elegant, greenery-filled meeting room" decoding="async" />
+        <figcaption><span>Learning through connection</span><p>Every experience.<br /><em>A chance to grow.</em></p></figcaption>
+      </figure>
+      <div className={styles.photoNote}><span>Reflect. Share. Inspire.</span><p>Your perspective helps shape the learning experiences of tomorrow.</p><a href="#feedback-form">Leave your feedback <span aria-hidden="true">↗</span></a></div>
+    </section>
     <FeedbackForm />
+    <section className={styles.closingPhoto} aria-label="Professional learning">
+      <img src="/images/corporate-ai-data.png" width="1672" height="941" alt="A facilitator leading an interactive professional workshop in a warm, sophisticated training space" loading="lazy" decoding="async" />
+      <div><span>Entrepôt Training Institute</span><h2>Better learning begins<br />with <em>your voice.</em></h2><a href="#feedback-form">Share your experience <span aria-hidden="true">↑</span></a></div>
+    </section>
     <SiteFooter />
   </main>;
 }
