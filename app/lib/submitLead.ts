@@ -2,7 +2,7 @@ export type LeadDestination = "courses" | "programs";
 
 const FORM_ENDPOINTS: Record<LeadDestination, string> = {
   courses: "https://formsubmit.co/ajax/courses@entrepot.ae",
-  programs: "https://formsubmit.co/ajax/courses@entrepot.ae",
+  programs: "https://formsubmit.co/ajax/programs@entrepot.ae",
 };
 
 const FIELD_ALIASES: Record<string, string[]> = {
