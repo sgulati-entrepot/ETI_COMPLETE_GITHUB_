@@ -30,8 +30,12 @@ export const metadata: Metadata = {
     "codex-preview": "development",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [
+      { url: "/eti-favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/eti-favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/eti-favicon-32.png",
+    apple: { url: "/eti-apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
 };
 
