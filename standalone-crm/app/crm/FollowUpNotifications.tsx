@@ -1,0 +1,15 @@
+'use client';
+import {useEffect,useState} from 'react';
+import type {Lead} from './model';
+import {followUpReminders} from './reminders';
+import Icon from './Icon';
+export default function FollowUpNotifications({leads,accountKey,ownerId,onOpen,serverReadIds,onMarkRead,onError}:{leads:Lead[];accountKey:string;ownerId?:string;onOpen:(id:string)=>void;serverReadIds?:string[];onMarkRead?:(ids:string[])=>Promise<void>;onError?:(message:string)=>void}){
+ const storageKey=`eti-follow-up-seen:${accountKey}`;
+ const [now,setNow]=useState(()=>new Date());const [open,setOpen]=useState(false);
+ const [seen,setSeen]=useState<string[]>(()=>{try{if(typeof window==='undefined')return [];const saved=JSON.parse(localStorage.getItem(storageKey)||'[]');return Array.isArray(saved)?saved.filter(x=>typeof x==='string'):[];}catch{return [];}});
+ useEffect(()=>{const update=()=>setNow(new Date());const timer=setInterval(update,30000);window.addEventListener('focus',update);document.addEventListener('visibilitychange',update);return()=>{clearInterval(timer);window.removeEventListener('focus',update);document.removeEventListener('visibilitychange',update);};},[]);
+ useEffect(()=>{if(serverReadIds)setSeen(serverReadIds);},[serverReadIds]);
+ const reminders=followUpReminders(leads,now,ownerId),unread=reminders.filter(r=>!seen.includes(r.id));
+ async function markRead(){const next=Array.from(new Set([...seen,...reminders.map(r=>r.id)])).slice(-1000);try{if(onMarkRead)await onMarkRead(next);setSeen(next);}catch(error){onError?.((error as Error).message);return;}try{localStorage.setItem(storageKey,JSON.stringify(next));}catch{/* Badge still updates for this session. */}}
+ return <div className="crm-followup-notifications"><button className="crm-icon-btn crm-notifications" aria-label={`Follow-up notifications, ${unread.length} unread`} aria-expanded={open} onClick={()=>setOpen(!open)}><Icon name="bell"/>{unread.length>0&&<span className="crm-reminder-count">{unread.length}</span>}</button>{unread.length>0&&<span className="crm-reminder-alert" role="status">{unread.length} follow-up reminder{unread.length===1?'':'s'}</span>}{open&&<section className="crm-reminder-panel" aria-label="Follow-up notifications"><div className="crm-reminder-heading"><h2>Follow-up reminders</h2><button className="crm-text-btn" onClick={()=>setOpen(false)}>Close</button></div><p>Reminders appear the day before and on the follow-up date. Times: {Intl.DateTimeFormat().resolvedOptions().timeZone}.</p>{unread.length>0&&<button className="crm-text-btn" onClick={markRead}>Mark all as read</button>}{reminders.length?reminders.map(r=><button key={r.id} className="crm-reminder-item" onClick={()=>{onOpen(r.lead.id);setOpen(false);}}><strong>{r.label}{!seen.includes(r.id)?' · New':''} — {r.lead.name}</strong><span>{new Date(r.lead.followUpAt!).toLocaleString()}</span><small>{r.lead.owner}</small></button>):<p>No follow-ups due today, tomorrow or overdue.</p>}<small>In-app reminders appear while signed in or when you return. Reschedule or clear the follow-up to stop overdue reminders.</small></section>}</div>;
+}

@@ -1,0 +1,6 @@
+import {useState} from 'react';
+import {closeDateInput} from './close-date';
+export default function CloseDateEditor({value,disabled,onSave}:{value:string;disabled:boolean;onSave:(value:string)=>Promise<void>}){
+ const [draft,setDraft]=useState<string|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState('');
+ return <form className="crm-close-editor" onSubmit={async e=>{e.preventDefault();if(draft===null)return;setBusy(true);setError('');try{await onSave(draft?new Date(draft).toISOString():'');setDraft(null);}catch(e){setError((e as Error).message);}finally{setBusy(false);}}}><input aria-label="Expected close date and time" type="datetime-local" value={draft??closeDateInput(value)} disabled={disabled||busy} onChange={e=>setDraft(e.target.value)}/><small>{Intl.DateTimeFormat().resolvedOptions().timeZone}{value.length===10&&draft===null?' · Existing date only; choose a time to save it.':''}</small>{draft!==null&&<div><button className="crm-btn primary" disabled={disabled||busy}>{busy?'Saving…':'Save'}</button><button className="crm-text-btn" type="button" disabled={busy} onClick={()=>{setDraft(null);setError('');}}>Cancel</button></div>}{error&&<small role="alert">{error}</small>}</form>;
+}

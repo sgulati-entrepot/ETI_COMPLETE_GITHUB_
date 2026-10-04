@@ -56,6 +56,12 @@ export function buildLeadPayload(data: FormData) {
 
 export async function submitLead(data: FormData, destination: LeadDestination = "courses") {
   const payload = buildLeadPayload(data);
+  // Keep email acceptance independent from the CRM copy.
+  if (typeof window !== "undefined" && ["etiworld.ae", "www.etiworld.ae"].includes(window.location.hostname) && !/^\/(feedback|careers)(\/|$)/.test(window.location.pathname)) {
+    payload.set("CRM Submission ID", crypto.randomUUID());
+    payload.set("CRM Page URL", window.location.origin + window.location.pathname);
+    payload.set("_url", window.location.origin + window.location.pathname);
+  }
 
   const response = await fetch(FORM_ENDPOINTS[destination], {
     method: "POST",
@@ -69,5 +75,19 @@ export async function submitLead(data: FormData, destination: LeadDestination = 
   const result = await response.json();
   if (result.success !== true && result.success !== "true") {
     throw new Error("FormSubmit did not accept the submission");
+  }
+  if (payload.has("CRM Submission ID")) {
+    // Only copy an accepted enquiry. A failed CRM copy must never report the email as failed.
+    const body = JSON.stringify({form_data: Object.fromEntries(payload)});
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const copy = await fetch("https://crm.etiworld.ae/.netlify/functions/crm-formsubmit", {
+          method: "POST", headers: {"Content-Type":"application/json"}, body,
+          signal: AbortSignal.timeout(4000), keepalive: true,
+        });
+        if (copy.ok) break;
+        if (copy.status >= 400 && copy.status < 500 && copy.status !== 429) break;
+      } catch { /* Email already accepted; retry the same ID safely. */ }
+    }
   }
 }

@@ -1,0 +1,17 @@
+{
+"Dashboard":["dashboard","home-learning-hero.png"],
+"Leads":["leads","course-entrepreneurship.png"],
+"Corporate leads":["corporate-leads","corporate-training-hero.png"],
+"Lead assignment":["assignment","careers-hero.jpg"],
+"Pipeline":["pipeline","supply-chain-boardroom-hero.jpg"],
+"Contacts":["contacts","students-club-hero.jpg"],
+"Accounts":["accounts","course-cpim.png"],
+"Activities":["activities","course-professional-excellence.png"],
+"Quotes":["quotes","certified-accounting-professional-hero-v2.jpg"],
+"Programs":["programs","training-gallery-hero-v2.jpg"],
+"Reports":["reports","microsoft-power-bi-training-hero-v2.jpg"],
+"Sales targets":["targets","course-cma.png"],
+"Team":["team","course-leadership.png"],
+"Integrations":["integrations","corporate-it-skills.png"],
+"Settings":["settings","terms-policies-hero.jpg"]
+}

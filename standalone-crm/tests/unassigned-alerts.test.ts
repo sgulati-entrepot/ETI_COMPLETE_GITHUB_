@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {seedData} from '../app/crm/model';
+import {unassignedCounts} from '../app/crm/unassigned';
+import {planUnassignedAlert,unassignedEmail,unassignedRecipients} from '../netlify/functions/_shared/crm-unassigned-alerts';
+import type {State} from '../netlify/functions/_shared/crm-domain';
+function fixture():State{const base=seedData().leads[0];return {leads:[{...base,id:'one',owner:'Unassigned',ownerId:''},{...base,id:'two',owner:'Unassigned',ownerId:'',leadType:'corporate'},{...base,id:'three',owner:'Ali',ownerId:'ali'}],tasks:[],events:[]};}
+test('unassigned counters and email recipients include both lead types',()=>{const state=fixture();assert.deepEqual(unassignedCounts(state.leads),{total:2,individual:1,corporate:1});const job=planUnassignedAlert(state)!;assert.deepEqual(job.leadIds,['one','two']);assert.deepEqual(unassignedEmail(state,job)!.to,unassignedRecipients);assert.match(unassignedEmail(state,job)!.text,/Total currently unassigned: 2/);});
+test('accepted jobs are not repeated and new arrivals create one new digest',()=>{const state=fixture(),job=planUnassignedAlert(state)!;state.unassignedAlerts=[{...job,status:'accepted'}];assert.equal(planUnassignedAlert(state),null);state.leads.push({...state.leads[0],id:'four'});assert.deepEqual(planUnassignedAlert(state)!.leadIds,['four']);});
+test('uncertain sends reuse idempotency key and frozen payload within 23 hours only',()=>{const state=fixture(),now=new Date('2026-10-03T10:00:00Z'),job=planUnassignedAlert(state,now)!;job.email=unassignedEmail(state,job)!;state.unassignedAlerts=[{...job,status:'unknown'}];assert.equal(planUnassignedAlert(state,new Date('2026-10-03T10:01:00Z')),null);const retry=planUnassignedAlert(state,new Date('2026-10-03T10:06:00Z'))!;assert.equal(retry.id,job.id);assert.deepEqual(retry.email,job.email);assert.equal(planUnassignedAlert(state,new Date('2026-10-04T10:00:00Z')),null);assert.equal(state.unassignedAlerts[0].status,'failed');});
+test('no email when all pending leads have been assigned',()=>{const state=fixture(),job=planUnassignedAlert(state)!;state.leads=state.leads.map(l=>({...l,ownerId:'ali',owner:'Ali'}));assert.equal(unassignedEmail(state,job),null);});
