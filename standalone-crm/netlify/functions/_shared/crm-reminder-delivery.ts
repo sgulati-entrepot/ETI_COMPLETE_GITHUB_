@@ -1,6 +1,6 @@
 import {createHash} from 'node:crypto';
 import type {State} from './crm-domain';
-export type Delivery={id:string;leadId:string;ownerId:string;followUpAt:string;channel:'email'|'whatsapp';to:string;cc:string[];text:string;parameters:string[];status:'sending'|'accepted'|'failed'|'unknown';at:string};
+export type Delivery={id:string;leadId:string;ownerId:string;followUpAt:string;channel:'email'|'whatsapp';to:string;cc:string[];text:string;parameters:string[];status:'sending'|'accepted'|'failed'|'unknown';at:string;messageId?:string;httpStatus?:number};
 export function planDeliveries(state:State,now:Date,admins:string[],phones:Record<string,string>,timezone='Asia/Dubai'):Delivery[]{
  const format=new Intl.DateTimeFormat('en-CA',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit'});
  const day=(d:Date)=>{const p=format.formatToParts(d);return Date.UTC(Number(p.find(x=>x.type==='year')!.value),Number(p.find(x=>x.type==='month')!.value)-1,Number(p.find(x=>x.type==='day')!.value));};
