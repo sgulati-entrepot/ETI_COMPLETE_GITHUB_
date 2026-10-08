@@ -1,10 +1,10 @@
 import type {Metadata} from "next";
 import PaidCorporateLanding from "./PaidCorporateLanding";
-import courseData from "../corporate-training/course-data.json";
 import "./paid-corporate.css";
+import "./corporate-updates.css";
 
-const title="Customised Corporate Training for L&D Leaders | Entrepôt";
-const description="Turn capability priorities into practical corporate training shaped around your people, business context and rollout needs. Request a tailored recommendation from ETI.";
+const title="Customised Corporate Training in Dubai, Abu Dhabi & GCC | Entrepôt";
+const description="Practical corporate training shaped around your organisation, people and business goals in Dubai, Abu Dhabi and across the GCC. Plan your programme with ETI.";
 
 export const metadata:Metadata={
   title,
@@ -14,4 +14,4 @@ export const metadata:Metadata={
   twitter:{card:"summary_large_image",title,description,images:["/images/corporate-training-hero.png"]},
 };
 
-export default function CustomisedCorporateTrainingPage(){return <PaidCorporateLanding courses={courseData}/>}
+export default function CustomisedCorporateTrainingPage(){return <><link rel="preload" as="image" href="/images/corporate-training-hero.png"/><PaidCorporateLanding/></>}
